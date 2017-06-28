@@ -1,0 +1,14 @@
+require('babel-polyfill');
+var page = require('page');
+var home = require('./homepage');
+var signup = require('./signup');
+var signin = require('./signin');
+var nologged = require('./nologged');
+var uploadfb = require('./upload-dates');
+var uploadinst = require('./upload-dates-inst');
+var uploadtw = require('./upload-dates-tw');
+var uploadtw = require('./upload-dates-web');
+var invaliduser = require('./userinvalid');
+var uploadp = require('./uploadp');
+var updatefb = require('./update-datesfb');
+page();
