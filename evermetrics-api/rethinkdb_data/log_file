@@ -1,0 +1,22 @@
+2017-05-11T13:47:41.944575000 0.141152s notice: Recursively removing directory /Volumes/Macintosh HD/eversocial6/Desktop/evermetrics-api/rethinkdb_data/tmp
+2017-05-11T13:47:41.961265000 0.157847s notice: Initializing directory /Volumes/Macintosh HD/eversocial6/Desktop/evermetrics-api/rethinkdb_data
+2017-05-11T13:47:41.961402000 0.157978s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Volumes/Macintosh HD/eversocial6/Desktop/evermetrics-api/rethinkdb_data' did not already exist or is empty.)
+2017-05-11T13:47:41.961454000 0.158030s notice: Running rethinkdb 2.3.5 (CLANG 7.3.0 (clang-703.0.31))...
+2017-05-11T13:47:41.996707000 0.193284s notice: Running on Darwin 15.5.0 x86_64
+2017-05-11T13:47:41.996774000 0.193350s notice: Loading data from directory /Volumes/Macintosh HD/eversocial6/Desktop/evermetrics-api/rethinkdb_data
+2017-05-11T13:47:44.567498000 2.764171s info: Automatically using cache size of 100 MB
+2017-05-11T13:47:44.567523000 2.764189s warn: Cache size does not leave much memory for server and query overhead (available memory: 555 MB).
+2017-05-11T13:47:44.567530000 2.764196s warn: Cache size is very low and may impact performance.
+2017-05-11T13:47:44.731949000 2.928616s notice: Listening for intracluster connections on port 29015
+2017-05-11T13:47:45.015728000 3.212440s notice: Listening for client driver connections on port 28015
+2017-05-11T13:47:45.015973000 3.212684s notice: Listening for administrative HTTP connections on port 8080
+2017-05-11T13:47:45.015976000 3.212687s notice: Listening on cluster addresses: 127.0.0.1, ::1
+2017-05-11T13:47:45.015981000 3.212692s notice: Listening on driver addresses: 127.0.0.1, ::1
+2017-05-11T13:47:45.015985000 3.212696s notice: Listening on http addresses: 127.0.0.1, ::1
+2017-05-11T13:47:45.015992000 3.212703s notice: To fully expose RethinkDB on the network, bind to all addresses by running rethinkdb with the `--bind all` command line option.
+2017-05-11T13:47:45.015998000 3.212709s notice: Server ready, "MacBook_Pro_de_Seis_local_jx9" c7d8bb0d-4ae9-4b32-92f2-fd405b092346
+2017-05-11T13:47:47.566048000 5.762850s notice: Server got SIGINT from pid 299, uid 501; shutting down...
+2017-05-11T13:47:47.566170000 5.762972s notice: Shutting down client connections...
+2017-05-11T13:47:47.566296000 5.763097s notice: All client connections closed.
+2017-05-11T13:47:47.566302000 5.763103s notice: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2017-05-11T13:47:47.569367000 5.766169s notice: Storage engine shut down.
