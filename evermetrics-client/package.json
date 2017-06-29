@@ -1,0 +1,35 @@
+{
+  "name": "evermetrics-client",
+  "version": "1.0.0",
+  "description": "Evermetrics API Client",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard",
+    "test": "npm run lint && ava"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eversocial/evermetrics-client.git"
+  },
+  "author": "Eversocial",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eversocial/evermetrics-client/issues"
+  },
+  "homepage": "https://github.com/eversocial/evermetrics-client#readme",
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "babel-eslint": "^7.1.1",
+    "nock": "^9.0.2",
+    "standard": "^8.6.0",
+    "uuid-base62": "^0.1.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "request": "^2.79.0",
+    "request-promise": "^4.1.1"
+  }
+}
