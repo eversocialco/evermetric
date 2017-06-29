@@ -1,0 +1,5 @@
+---
+dependencies:
+- { role: jdauphant.nginx, sudo: yes }
+- { role: jacobwgillespie-ansible.rethinkdb, sudo: yes }
+- { role: nodesource.node, sudo: yes }

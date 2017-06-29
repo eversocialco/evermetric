@@ -1,0 +1,21 @@
+---
+- hosts: evermetrics*
+  sudo: yes
+  pre_tasks:
+    - name: Update apt repository
+      apt: update_cache=yes
+  roles:
+    - evermetrics
+  vars:
+    - projects:
+      - evermetrics-dbs
+      - evermetrics-client
+      - evermetrics-api
+      - evermetrics-ws
+      - evermetrics-front
+    - services:
+      - evermetrics-api-estadisticas
+      - evermetrics-api-users
+      - evermetrics-api-auth
+      - evermetrics-ws
+      - evermetrics-front

@@ -1,0 +1,50 @@
+---
+- include: deps.yml
+- name: "Restarting RethinkDB"
+  service:
+     name=rethinkdb
+     state=restarted
+- name: "Copying Projects"
+  copy:
+    src="{{ item }}"
+    dest=/opt/
+    mode=u=r,g=r
+  with_items: "{{ projects }}"
+- name: "Running npm install"
+  command: bash -c "npm install || npm install"
+    chdir="/opt/{{ item }}"
+    creates="/opt/{{ item }}/node_modules"
+  with_items: "{{ projects }}"
+- name: "Setting up Database"
+  command: bash -c "node setup.js"
+    chdir="/opt/evermetrics-dbs"
+- name: "Build Evermetrics Project"
+  command: bash -c "npm run build"
+    chdir="/opt/evermetrics-front"
+- name: "Installing upstart scripts"
+  copy:
+    src="upstart/{{ item }}.conf"
+    dest=/etc/init
+    mode=u=r,g=r
+  with_items: "{{ services }}"
+- name: "Running Services"
+  service:
+    name={{ item }}
+    state=restarted
+    enabled=yes
+  with_items: "{{ services }}"
+- name: "Copying NGINX config files"
+  sudo: yes
+  copy:
+    src="nginx/{{ item }}"
+    dest="/etc/nginx/sites-enabled/{{ item }}"
+    mode=u=r,g=r,o=r
+  with_items:
+    - evermetrics.conf
+    - evermetrics-api.conf
+    - evermetrics-ws.conf
+- name: "Restarting NGINX"
+  sudo: yes
+  service:
+    name=nginx
+    state=reloaded

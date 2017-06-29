@@ -1,0 +1,30 @@
+{
+  "name": "evermetrics-ws",
+  "version": "1.0.0",
+  "description": "Evermetrics Real Time Backend",
+  "scripts": {
+    "lint": "standard",
+    "start": "node server.js"
+  },
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eversocial/evermetrics-ws.git"
+  },
+  "author": "Eversocial",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eversocial/evermetrics-ws/issues"
+  },
+  "homepage": "https://github.com/eversocial/evermetrics-ws#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "standard": "^8.6.0"
+  },
+  "dependencies": {
+    "rethinkdb": "^2.3.3",
+    "socket.io": "^1.7.2"
+  }
+}
