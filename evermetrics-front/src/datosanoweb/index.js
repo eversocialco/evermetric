@@ -1,7 +1,6 @@
 var yo = require('yo-yo');
 
 module.exports = function(dato) {
-  console.log(dato);
   return yo`<div class="estadisticas">
   <div id="wb${dato.year}" class="col m12 cont-datos tab-content-datos contAnalytics wb${dato.year}">
     <h4 style="padding:20px;text-align:center;border-bottom: 1px solid whitesmoke;">Año ${dato.year}</h4>
@@ -180,12 +179,12 @@ module.exports = function(dato) {
           <div class="cont-info-ano cont-tortas contTortas">
             <div class="datos-tortas">
               <div class="cont-labels wlabel">
-                <h5 class="color-hombre" style="color:#e1bc29"><i class="fa fa-square" aria-hidden="true"></i>Colombia:</h5>
-                <p class="color-hombre" style="color:#e1bc29"> ${dato.country.ppal || 0}%</p>
+                <h5 class="color-hombre" style="color:#e1bc29 !important"><i class="fa fa-square" aria-hidden="true"></i>Colombia:</h5>
+                <p class="color-hombre" style="color:#e1bc29 !important"> ${dato.country.ppal || 0}%</p>
               </div>
               <div class="cont-labels wlabel">
-                <h5 class="color-mujer" style="color:#53A8C3"><i class="fa fa-square" aria-hidden="true"></i>USA:</h5>
-                <p class="color-mujer" style="color:#53A8C3"> ${dato.country.sec || 0}%</p>
+                <h5 class="color-mujer" style="color:#53A8C3 !important"><i class="fa fa-square" aria-hidden="true"></i>USA:</h5>
+                <p class="color-mujer" style="color:#53A8C3 !important"> ${dato.country.sec || 0}%</p>
               </div>
               <div class="cont-labels wlabel">
                 <h5 class="color-paiso" style="color:#3bb273"><i class="fa fa-square" aria-hidden="true"></i>Otros:</h5>

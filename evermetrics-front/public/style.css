@@ -6409,6 +6409,19 @@ a {
 .btn-login {
   background-color: #7AE7C7; }
 
+.contNewUser {
+  display: none; }
+
+.contMessageWelcome {
+  max-width: 700px;
+  margin: 0 auto; }
+
+.contMessageWelcome p {
+  line-height: 36px;
+  text-align: center;
+  font-size: 34px;
+  margin-top: 40px; }
+
 .btn, .btn-large, .btn-large {
   background-color: #7AE7C7; }
 
@@ -6880,6 +6893,9 @@ body {
 .tabs-menu-redes li.current.twitter {
   background-color: #1da1f2; }
 
+.tabs-menu-redes li.current.web {
+  background-color: #fb953d; }
+
 .tabs-menu-redes li.current a {
   /*color: #5a5b5b !important;*/
   color: white !important;
@@ -6961,7 +6977,8 @@ input[type="button"]:focus:not([readonly]), input[type="button"]:focus {
   text-align: center;
   /*box-shadow: 0px 0px 2px #5a5b5b;
   box-shadow: 1px 0px 1px 0px rgba(90, 91, 91, 0.33);*/
-  border: 1px solid rgba(218, 217, 217, 0.33); }
+  border: 1px solid rgba(218, 217, 217, 0.33);
+  max-width: 400px; }
 
 #top-menu .tabs-menu-redes li a {
   font-size: 17px;

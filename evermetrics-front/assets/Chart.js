@@ -40,7 +40,7 @@
 			animation: true,
 
 			// Number - Number of animation steps
-			animationSteps: 60,
+			animationSteps: 1,
 
 			// String - Animation easing effect
 			animationEasing: "easeOutQuart",
@@ -108,7 +108,7 @@
 			tooltipFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
 
 			// Number - Tooltip label font size in pixels
-			tooltipFontSize: 14,
+			tooltipFontSize: 12,
 
 			// String - Tooltip font weight style
 			tooltipFontStyle: "normal",
@@ -411,7 +411,7 @@
 			 	{
 			 	return templateString(valuesObject);
 			 	}
-			 
+
 			var cache = {};
 			function tmpl(str, data){
 				// Figure out if we're getting a template, or if we need to

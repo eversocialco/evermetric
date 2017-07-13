@@ -999,6 +999,7 @@ page('/', utils.loadAuth, header, loadestadisticas, function(ctx, next){
     			$(this).parent().siblings().removeClass("current");
     			//var tab = $(this).find('a').attr("href");
           var tab = $(this).attr("href");
+          console.log(tab);
     			$(".tab-content-datos").not(tab).css("display", "none");
           $(".tab-content-datosm").not(tab).css("display", "none");
           if ( $('#stadistitics-container '+tab).length > 0 ) {
@@ -1018,6 +1019,13 @@ page('/', utils.loadAuth, header, loadestadisticas, function(ctx, next){
 
   	  $(document).ready(function(){
         $('ul.tabs').tabs();
+        $('.tabs-menu-redes .mnli:first-child').addClass('current');
+        $('#stadistitics-container .tab-content-redes:first-child').css('display', 'block');
+        $('.contMenuNav .tab-content-redesm:first-child').css('display', 'block');
+        if ( !$('#stadistitics-container .tab-content-redes').length > 0 ) {
+          $('.contNewUser').fadeIn();
+          console.log('there are not dates');
+        }
       });
 
       $(document).ready(function(){

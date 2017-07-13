@@ -44,45 +44,28 @@ module.exports = function (ctx, dates) {
       <div class="row">
         <div class="col m7 contNavRedes">
           <ul class="tabs-menu-redes">
-            <li class="current facebook"><a href=".facebook"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>
-            <li class="instagram"><a href=".instagram"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a></li>
-            <li class="twitter"><a href=".twitter"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>
-            <li class="web"><a href=".web"><i class="fa fa-globe" aria-hidden="true"></i>Website</a></li>
+            ${loadTabFacebook(ctx, dates)}
+            ${loadTabInstagram(ctx, dates)}
+            ${loadTabTwitter(ctx, dates)}
+            ${loadTabWeb(ctx, dates)}
           </ul>
         </div>
+        <div class="col m5 contMenuNav">
           ${loadMenuFb(ctx, dates)}
           ${loadMenuInst(ctx, dates)}
           ${loadMenuTwit(ctx, dates)}
           ${loadMenuWeb(ctx, dates)}
+        </div>
       </div>
   </div>
   <div id="stadistitics-container" class="cont-redes tab-content">
-    <div id="facebook" class="facebook row tab-content-redes" style="display:block" >
-        ${loadDatesFb(ctx, dates)}
-        <div class="col m12 cont-datos tab-content-datos default">
-          <div class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p>Selecciona un mes para <span class="anoposi"></span></p></div>
-        </div>
+    ${loadDatesFb(ctx, dates)}
+    ${loadDatesInst(ctx, dates)}
+    ${loadDatesTw(ctx, dates)}
+    ${loadDatesWeb(ctx, dates)}
+    <div class="col m12 contNewUser">
+      <div class="title-error contMessageWelcome"><i class="fa fa-user" aria-hidden="true"></i><p>Bienvenido a Evermetric, aún no tienes estadisticas en la plataforma</p></div>
     </div>
-
-    <div id="instagram" class="instagram row tab-content-redes">
-        ${loadDatesInst(ctx, dates)}
-        <div class="col m12 cont-datos tab-content-datos default">
-          <div class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p>Selecciona un mes para <span class="anoposi"></span></p></div>
-        </div>
-    </div>
-    <div id="twitter" class="twitter row tab-content-redes">
-        ${loadDatesTw(ctx, dates)}
-        <div class="col m12 cont-datos tab-content-datos default">
-          <div class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p>Selecciona un mes para <span class="anoposi"></span></p></div>
-        </div>
-    </div>
-    <div id="web" class="web row tab-content-redes">
-        ${loadDatesWeb(ctx, dates)}
-        <div class="col m12 cont-datos tab-content-datos default">
-          <div class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p>Selecciona un mes para <span class="anoposi"></span></p></div>
-        </div>
-    </div>
-
   </div>
   </div>`
 
@@ -121,35 +104,101 @@ module.exports = function (ctx, dates) {
 }
 
 
-function loadDatesInst(ctx, dates){
+function loadTabFacebook(ctx, dates){
+  var red = "fb";
+  for(var i in dates){
+    if(dates[i].userId === ctx.auth.username){
+     hay = buscardatos(ctx, dates, red);
+     if(hay === 1){
+       hay = 0;
+       return yo `<li class="facebook mnli"><a href=".facebook"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>`
+     }
+    }
+  }
+}
+
+function loadTabInstagram(ctx, dates){
   var red = "inst";
   for(var i in dates){
     if(dates[i].userId === ctx.auth.username){
      hay = buscardatos(ctx, dates, red);
      if(hay === 1){
        hay = 0;
-       ++mostrardatosinst
-       if(mostrardatosinst === 1){
-         return yo`<div class="cont-meses">
-            ${loadViewTabs(ctx, dates, red)}
-         </div>`
-       }
-     }else if (hay === 2){
-        hay = 0;
-        ++contins
-        if(contins === 1){
-          return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
-        }
+       return yo `<li class="instagram mnli"><a href=".instagram"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a></li>`
      }
-     noDatesUser = 0;
-    }else{
-      noDatesUser = 1;
     }
   }
-  if(noDatesUser===1){
-    return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
+}
+
+
+function loadTabTwitter(ctx, dates){
+  var red = "tw";
+  for(var i in dates){
+    if(dates[i].userId === ctx.auth.username){
+     hay = buscardatos(ctx, dates, red);
+     if(hay === 1){
+       hay = 0;
+       return yo `<li class="twitter mnli"><a href=".twitter"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</a></li>`
+     }
+    }
+  }
+}
+
+function loadTabWeb(ctx, dates){
+  var red = "web";
+  for(var i in dates){
+    if(dates[i].userId === ctx.auth.username){
+     hay = buscardatos(ctx, dates, red);
+     if(hay === 1){
+       hay = 0;
+       return yo `<li class="web mnli"><a href=".web"><i class="fa fa-globe" aria-hidden="true"></i>Website</a></li>`
+     }
+    }
+  }
+}
+
+function loadDatesInst(ctx, dates){
+  var red = "inst";
+  hay = buscardatos(ctx, dates, red);
+  if(hay===1){
+     hay = 0;
+     return yo`<div id="instagram" class="instagram row tab-content-redes">
+         ${load(ctx, dates)}
+         <div class="col m12 cont-datos tab-content-datos default">
+           <div class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p>Selecciona un mes para <span class="anoposi"></span></p></div>
+         </div>
+     </div>`
   }
 
+  function load(ctx, dates){
+    var red = "inst";
+    for(var i in dates){
+      if(dates[i].userId === ctx.auth.username){
+       hay = buscardatos(ctx, dates, red);
+       if(hay === 1){
+         hay = 0;
+         ++mostrardatosinst
+         if(mostrardatosinst === 1){
+           return yo`<div class="cont-meses">
+              ${loadViewTabs(ctx, dates, red)}
+           </div>`
+         }
+       }else if (hay === 2){
+          hay = 0;
+          ++contins
+          if(contins === 1){
+            return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
+          }
+       }
+       noDatesUser = 0;
+      }else{
+        noDatesUser = 1;
+      }
+    }
+    if(noDatesUser===1){
+      return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
+    }
+  }
 }
 
 function loadMenuInst(ctx, dates){
@@ -162,7 +211,7 @@ function loadMenuInst(ctx, dates){
         var mostrarItemsInst = 0;
         ++mostrarItemsInst;
         if(mostrarItemsInst === 1){
-          return yo`<div class="instagram col m5 tab-content-redesm">
+          return yo`<div class="instagram tab-content-redesm">
           <div class="contNavTabs">
             <div class="col m4 offset-m4 itemNavTabs">
               <input type="button" data-activates="drop-anoinst" class="dropdown-button" value="Año" /><span class="btnano"></span>
@@ -184,33 +233,49 @@ function loadMenuInst(ctx, dates){
 }
 
 function loadDatesFb(ctx, dates){
-   var red = "fb";
-   for(var i in dates){
-     if(dates[i].userId === ctx.auth.username){
-      hay = buscardatos(ctx, dates, red);
-      if(hay === 1){
-        hay = 0;
-        ++mostrardatosfb
-        if(mostrardatosfb === 1){
-          return yo`<div class="cont-meses">
-             ${loadViewTabs(ctx, dates, red)}
-          </div>`
-        }
-      }else if (hay === 2){
+  var red = "fb";
+  hay = buscardatos(ctx, dates, red);
+  if(hay===1){
+     hay = 0;
+     return yo `<div id="facebook" class="facebook row tab-content-redes">
+         ${load(ctx, dates)}
+         <div class="col m12 cont-datos tab-content-datos default">
+           <div class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p>Selecciona un mes para <span class="anoposi"></span></p></div>
+         </div>
+     </div>`
+  }
+
+
+  function load(ctx, dates){
+    var red = "fb";
+    for(var i in dates){
+      if(dates[i].userId === ctx.auth.username){
+       hay = buscardatos(ctx, dates, red);
+       if(hay === 1){
          hay = 0;
-         ++contfb
-         if(contfb === 1){
-           return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
+         ++mostrardatosfb
+         if(mostrardatosfb === 1){
+           return yo`<div class="cont-meses">
+              ${loadViewTabs(ctx, dates, red)}
+           </div>`
          }
+       }else if (hay === 2){
+          hay = 0;
+          ++contfb
+          if(contfb === 1){
+            return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
+          }
+       }
+       noDatesUser = 0;
+      }else{
+        noDatesUser = 1;
       }
-      noDatesUser = 0;
-     }else{
-       noDatesUser = 1;
-     }
-   }
-   if(noDatesUser===1){
-     return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
-   }
+    }
+    if(noDatesUser===1){
+      return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
+    }
+  }
+
 }
 
 function loadMenuFb(ctx, dates){
@@ -223,7 +288,7 @@ function loadMenuFb(ctx, dates){
         var mostrarItemsfb = 0;
         ++mostrarItemsfb;
         if(mostrarItemsfb === 1){
-          return yo`<div class="facebook col m5 tab-content-redesm" style="display:block">
+          return yo`<div class="facebook tab-content-redesm" >
           <div class="contNavTabs">
             <div class="col m4 offset-m4 itemNavTabs">
               <input type="button" data-activates="drop-ano" class="dropdown-button" value="Año" /><span class="btnano"></span>
@@ -254,7 +319,7 @@ function loadMenuWeb(ctx, dates){
         var mostrarItemsweb = 0;
         ++mostrarItemsweb;
         if(mostrarItemsweb === 1){
-          return yo`<div class="web col m5 tab-content-redesm">
+          return yo`<div class="web tab-content-redesm">
           <div class="contNavTabs">
             <div class="col m4 offset-m4 itemNavTabs">
               <input type="button" data-activates="drop-anoweb" class="dropdown-button" value="Año" /><span class="btnano"></span>
@@ -276,33 +341,49 @@ function loadMenuWeb(ctx, dates){
 }
 
 function loadDatesTw(ctx, dates){
+
   var red = "tw";
-  for(var i in dates){
-    if(dates[i].userId === ctx.auth.username){
-     hay = buscardatos(ctx, dates, red);
-     if(hay === 1){
-       hay = 0;
-       ++mostrardatostw
-       if(mostrardatostw === 1){
-         return yo`<div class="cont-meses">
-            ${loadViewTabs(ctx, dates, red)}
-         </div>`
+  hay = buscardatos(ctx, dates, red);
+  if(hay===1){
+     hay = 0;
+     return yo`<div id="twitter" class="twitter row tab-content-redes">
+         ${load(ctx, dates)}
+         <div class="col m12 cont-datos tab-content-datos default">
+           <div class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p>Selecciona un mes para <span class="anoposi"></span></p></div>
+         </div>
+     </div>`
+   }
+
+  function load(ctx, dates){
+    var red = "tw";
+    for(var i in dates){
+      if(dates[i].userId === ctx.auth.username){
+       hay = buscardatos(ctx, dates, red);
+       if(hay === 1){
+         hay = 0;
+         ++mostrardatostw
+         if(mostrardatostw === 1){
+           return yo`<div class="cont-meses">
+              ${loadViewTabs(ctx, dates, red)}
+           </div>`
+         }
+       }else if (hay === 2){
+          hay = 0;
+          ++conttw
+          if(conttw === 1){
+            return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
+          }
        }
-     }else if (hay === 2){
-        hay = 0;
-        ++conttw
-        if(conttw === 1){
-          return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
-        }
-     }
-     noDatesUser = 0;
-    }else{
-      noDatesUser = 1;
+       noDatesUser = 0;
+      }else{
+        noDatesUser = 1;
+      }
+    }
+    if(noDatesUser===1){
+      return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
     }
   }
-  if(noDatesUser===1){
-    return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
-  }
+
 }
 
 function loadMenuTwit(ctx, dates){
@@ -315,7 +396,7 @@ function loadMenuTwit(ctx, dates){
         var mostrarItemstw = 0;
         ++mostrarItemstw;
         if(mostrarItemstw === 1){
-          return yo`<div class="twitter col m5 tab-content-redesm">
+          return yo`<div class="twitter tab-content-redesm">
           <div class="contNavTabs">
             <div class="col m4 offset-m4 itemNavTabs">
               <input type="button" data-activates="drop-anotw" class="dropdown-button" value="Año" /><span class="btnano"></span>
@@ -338,32 +419,47 @@ function loadMenuTwit(ctx, dates){
 
 function loadDatesWeb(ctx, dates){
   var red = "web";
-  for(var i in dates){
-    if(dates[i].userId === ctx.auth.username){
-     hay = buscardatos(ctx, dates, red);
-     if(hay === 1){
-       hay = 0;
-       ++mostrardatosweb
-       if(mostrardatosweb === 1){
-         return yo`<div class="cont-meses">
-            ${loadViewTabs(ctx, dates, red)}
-         </div>`
+  hay = buscardatos(ctx, dates, red);
+  if(hay===1){
+     hay = 0;
+     return yo`<div id="web" class="web row tab-content-redes">
+         ${load(ctx, dates)}
+         <div class="col m12 cont-datos tab-content-datos default">
+           <div class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i><p>Selecciona un mes para <span class="anoposi"></span></p></div>
+         </div>
+     </div>`
+  }
+
+  function load(ctx, dates){
+    var red = "web";
+    for(var i in dates){
+      if(dates[i].userId === ctx.auth.username){
+       hay = buscardatos(ctx, dates, red);
+       if(hay === 1){
+         hay = 0;
+         ++mostrardatosweb
+         if(mostrardatosweb === 1){
+           return yo`<div class="cont-meses">
+              ${loadViewTabs(ctx, dates, red)}
+           </div>`
+         }
+       }else if (hay === 2){
+          hay = 0;
+          ++contweb
+          if(contweb === 1){
+            return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
+          }
        }
-     }else if (hay === 2){
-        hay = 0;
-        ++contweb
-        if(contweb === 1){
-          return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
-        }
-     }
-     noDatesUser = 0;
-    }else{
-      noDatesUser = 1;
+       noDatesUser = 0;
+      }else{
+        noDatesUser = 1;
+      }
+    }
+    if(noDatesUser===1){
+      return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
     }
   }
-  if(noDatesUser===1){
-    return yo`<h1 class="title-error"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>No existen datos</h1>`
-  }
+
 }
 
 function loadMenuYear(ctx, dates, red){
@@ -484,7 +580,6 @@ function loadViewTabs(ctx, dates, red){
         if(dates[i].type === 'year'  ){
           resultado.appendChild(vistawebano (dates[i]));
         }else{
-          console.log('entro else year web');
           resultado.appendChild(vistamonthweb (ctx, dates[i]));
         }
       }

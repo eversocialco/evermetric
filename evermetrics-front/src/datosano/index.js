@@ -1,7 +1,6 @@
 var yo = require('yo-yo');
 
 module.exports = function(dato) {
-  console.log(dato);
   return yo`<div class="ano">
   <div id="fb${dato.year}" class="col m12 comparativo-ano tab-content-datos fb${dato.year}">
     <h4 style="padding:20px;text-align:center;">Año ${dato.year}</h4>
