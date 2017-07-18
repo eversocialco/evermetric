@@ -11,7 +11,7 @@ rethinkdb
 Luego debemos vamos a lanzar los microservicios, para esto debemos tener en cuenta que debemos linkear el paquete de evermetrics-dbs como dependencia de evermetrics-api localmente con el comando
 
 ```
-npm link.
+npm link
 ```
 Para lanzar los servicios lo realizamos con el siguiente comando.
 
