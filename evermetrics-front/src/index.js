@@ -11,4 +11,5 @@ var uploadtw = require('./upload-dates-web');
 var invaliduser = require('./userinvalid');
 var uploadp = require('./uploadp');
 var updatefb = require('./update-datesfb');
+var instagram = require('./instagram');
 page();

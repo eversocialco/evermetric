@@ -40,21 +40,6 @@ module.exports = function(ctx, dato) {
                         <p>${dato.comments || 0}</p>
                       </div>
                     </div>
-                <h4>Usuarios Principales</h4>
-                        <div class="row">
-                            <div class="col m4 cont-variables">
-                              <h5>${dato.usersppal.userone.nick}</h5>
-                              <p>${dato.usersppal.userone.likes} likes</p>
-                            </div>
-                            <div class="col m4 cont-variables">
-                              <h5>${dato.usersppal.usertwo.nick}</h5>
-                              <p>${dato.usersppal.usertwo.likes} likes</p>
-                            </div>
-                            <div class="col m4 cont-variables">
-                              <h5>${dato.usersppal.userthree.nick}</h5>
-                              <p>${dato.usersppal.userthree.likes} likes</p>
-                            </div>
-                        </div>
                  <h4>Interacción</h4>
                         <div class="row">
                             <div class="col m8 cont-variables">

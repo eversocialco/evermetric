@@ -20070,14 +20070,14 @@ module.exports = function (dato) {
 },{"yo-yo":388}],392:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<div class="estadisticas cont-instagram">\n              <div id="it', '', '" class="col m12 cont-datos tab-content-datos it', '', '">\n                <div class="contHeaderVisual">\n                  <div class="contTitleVisual">\n                    <h4 class="title-mes">', ' - ', '</h4>\n                  </div>\n                  <div class="logo-cliente">\n                    <img src="', '"  />\n                  </div>\n                </div>\n                <h4>Crecimiento</h4>\n                    <div class="row">\n                      <div class="col m4 cont-variables">\n                        <h5>Total seguidores</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Total seguidos</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Total post</h5>\n                        <p>', '</p>\n                      </div>\n                    </div>\n                    <div class="row">\n                      <div class="col m4 cont-variables">\n                        <h5>Post mes</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Likes mes</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Comentarios</h5>\n                        <p>', '</p>\n                      </div>\n                    </div>\n                <h4>Usuarios Principales</h4>\n                        <div class="row">\n                            <div class="col m4 cont-variables">\n                              <h5>', '</h5>\n                              <p>', ' likes</p>\n                            </div>\n                            <div class="col m4 cont-variables">\n                              <h5>', '</h5>\n                              <p>', ' likes</p>\n                            </div>\n                            <div class="col m4 cont-variables">\n                              <h5>', '</h5>\n                              <p>', ' likes</p>\n                            </div>\n                        </div>\n                 <h4>Interacci\xF3n</h4>\n                        <div class="row">\n                            <div class="col m8 cont-variables">\n                              <img src="', '"  />\n                            </div>\n                            <div class="col m4 cont-variables">\n                              <h5>Post con mayor likes</h5>\n                              <p>  1. ', ' likes<br>2. ', ' likes<br>3. ', ' likes</p>\n                            </div>\n                        </div>\n              </div>\n  </div>'], ['<div class="estadisticas cont-instagram">\n              <div id="it', '', '" class="col m12 cont-datos tab-content-datos it', '', '">\n                <div class="contHeaderVisual">\n                  <div class="contTitleVisual">\n                    <h4 class="title-mes">', ' - ', '</h4>\n                  </div>\n                  <div class="logo-cliente">\n                    <img src="', '"  />\n                  </div>\n                </div>\n                <h4>Crecimiento</h4>\n                    <div class="row">\n                      <div class="col m4 cont-variables">\n                        <h5>Total seguidores</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Total seguidos</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Total post</h5>\n                        <p>', '</p>\n                      </div>\n                    </div>\n                    <div class="row">\n                      <div class="col m4 cont-variables">\n                        <h5>Post mes</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Likes mes</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Comentarios</h5>\n                        <p>', '</p>\n                      </div>\n                    </div>\n                <h4>Usuarios Principales</h4>\n                        <div class="row">\n                            <div class="col m4 cont-variables">\n                              <h5>', '</h5>\n                              <p>', ' likes</p>\n                            </div>\n                            <div class="col m4 cont-variables">\n                              <h5>', '</h5>\n                              <p>', ' likes</p>\n                            </div>\n                            <div class="col m4 cont-variables">\n                              <h5>', '</h5>\n                              <p>', ' likes</p>\n                            </div>\n                        </div>\n                 <h4>Interacci\xF3n</h4>\n                        <div class="row">\n                            <div class="col m8 cont-variables">\n                              <img src="', '"  />\n                            </div>\n                            <div class="col m4 cont-variables">\n                              <h5>Post con mayor likes</h5>\n                              <p>  1. ', ' likes<br>2. ', ' likes<br>3. ', ' likes</p>\n                            </div>\n                        </div>\n              </div>\n  </div>']);
+var _templateObject = _taggedTemplateLiteral(['<div class="estadisticas cont-instagram">\n              <div id="it', '', '" class="col m12 cont-datos tab-content-datos it', '', '">\n                <div class="contHeaderVisual">\n                  <div class="contTitleVisual">\n                    <h4 class="title-mes">', ' - ', '</h4>\n                  </div>\n                  <div class="logo-cliente">\n                    <img src="', '"  />\n                  </div>\n                </div>\n                <h4>Crecimiento</h4>\n                    <div class="row">\n                      <div class="col m4 cont-variables">\n                        <h5>Total seguidores</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Total seguidos</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Total post</h5>\n                        <p>', '</p>\n                      </div>\n                    </div>\n                    <div class="row">\n                      <div class="col m4 cont-variables">\n                        <h5>Post mes</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Likes mes</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Comentarios</h5>\n                        <p>', '</p>\n                      </div>\n                    </div>\n                 <h4>Interacci\xF3n</h4>\n                        <div class="row">\n                            <div class="col m8 cont-variables">\n                              <img src="', '"  />\n                            </div>\n                            <div class="col m4 cont-variables">\n                              <h5>Post con mayor likes</h5>\n                              <p>  1. ', ' likes<br>2. ', ' likes<br>3. ', ' likes</p>\n                            </div>\n                        </div>\n              </div>\n  </div>'], ['<div class="estadisticas cont-instagram">\n              <div id="it', '', '" class="col m12 cont-datos tab-content-datos it', '', '">\n                <div class="contHeaderVisual">\n                  <div class="contTitleVisual">\n                    <h4 class="title-mes">', ' - ', '</h4>\n                  </div>\n                  <div class="logo-cliente">\n                    <img src="', '"  />\n                  </div>\n                </div>\n                <h4>Crecimiento</h4>\n                    <div class="row">\n                      <div class="col m4 cont-variables">\n                        <h5>Total seguidores</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Total seguidos</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Total post</h5>\n                        <p>', '</p>\n                      </div>\n                    </div>\n                    <div class="row">\n                      <div class="col m4 cont-variables">\n                        <h5>Post mes</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Likes mes</h5>\n                        <p>', '</p>\n                      </div>\n                      <div class="col m4 cont-variables">\n                        <h5>Comentarios</h5>\n                        <p>', '</p>\n                      </div>\n                    </div>\n                 <h4>Interacci\xF3n</h4>\n                        <div class="row">\n                            <div class="col m8 cont-variables">\n                              <img src="', '"  />\n                            </div>\n                            <div class="col m4 cont-variables">\n                              <h5>Post con mayor likes</h5>\n                              <p>  1. ', ' likes<br>2. ', ' likes<br>3. ', ' likes</p>\n                            </div>\n                        </div>\n              </div>\n  </div>']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
 var yo = require('yo-yo');
 
 module.exports = function (ctx, dato) {
-  return yo(_templateObject, dato.year, dato.month, dato.year, dato.month, dato.month, dato.year, ctx.auth.src, dato.allfans || 0, dato.follows || 0, dato.allpost || 0, dato.postbymonth || 0, dato.likebymonth || 0, dato.comments || 0, dato.usersppal.userone.nick, dato.usersppal.userone.likes, dato.usersppal.usertwo.nick, dato.usersppal.usertwo.likes, dato.usersppal.userthree.nick, dato.usersppal.userthree.likes, dato.topposts.src, dato.topposts.likesone, dato.topposts.likestwo, dato.topposts.likesthree);
+  return yo(_templateObject, dato.year, dato.month, dato.year, dato.month, dato.month, dato.year, ctx.auth.src, dato.allfans || 0, dato.follows || 0, dato.allpost || 0, dato.postbymonth || 0, dato.likebymonth || 0, dato.comments || 0, dato.topposts.src, dato.topposts.likesone, dato.topposts.likestwo, dato.topposts.likesthree);
 };
 
 },{"yo-yo":388}],393:[function(require,module,exports){
@@ -20470,7 +20470,7 @@ function asyncload(ctx, next) {
   }, null, this, [[0, 7]]);
 }
 
-},{"../header":395,"../picture-card":405,"../utils":424,"./template":397,"axios":3,"empty-element":333,"page":361,"socket.io-client":368,"superagent":380,"title":384}],397:[function(require,module,exports){
+},{"../header":395,"../picture-card":407,"../utils":426,"./template":397,"axios":3,"empty-element":333,"page":361,"socket.io-client":368,"superagent":380,"title":384}],397:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="container timeline cont-estadisticas">\n  <div id="top-menu" class="container">\n      <div class="row">\n        <div class="col m7 contNavRedes">\n          <ul class="tabs-menu-redes">\n            ', '\n            ', '\n            ', '\n            ', '\n          </ul>\n        </div>\n        <div class="col m5 contMenuNav">\n          ', '\n          ', '\n          ', '\n          ', '\n        </div>\n      </div>\n  </div>\n  <div id="stadistitics-container" class="cont-redes tab-content">\n    ', '\n    ', '\n    ', '\n    ', '\n    <div class="col m12 contNewUser">\n      <div class="title-error contMessageWelcome">\n        <div class="contWelcome">\n          <img src="', '" />\n        </div>\n        <p>Bienvenido a Evermetric, a\xFAn no tienes estadisticas en la plataforma</p>\n      </div>\n    </div>\n  </div>\n  </div>'], ['<div class="container timeline cont-estadisticas">\n  <div id="top-menu" class="container">\n      <div class="row">\n        <div class="col m7 contNavRedes">\n          <ul class="tabs-menu-redes">\n            ', '\n            ', '\n            ', '\n            ', '\n          </ul>\n        </div>\n        <div class="col m5 contMenuNav">\n          ', '\n          ', '\n          ', '\n          ', '\n        </div>\n      </div>\n  </div>\n  <div id="stadistitics-container" class="cont-redes tab-content">\n    ', '\n    ', '\n    ', '\n    ', '\n    <div class="col m12 contNewUser">\n      <div class="title-error contMessageWelcome">\n        <div class="contWelcome">\n          <img src="', '" />\n        </div>\n        <p>Bienvenido a Evermetric, a\xFAn no tienes estadisticas en la plataforma</p>\n      </div>\n    </div>\n  </div>\n  </div>']),
@@ -20998,7 +20998,7 @@ function datesfb(ctx){
      }(document, 'script', 'facebook-jssdk'));
 }*/
 
-},{"../datosano":390,"../datosanoweb":391,"../datosinst":392,"../datosmonthweb":393,"../datostwit":394,"../layout":400,"../menu-lateral-ano":401,"../menu-lateral-mes":402,"../picture-card":405,"yo-yo":388}],398:[function(require,module,exports){
+},{"../datosano":390,"../datosanoweb":391,"../datosinst":392,"../datosmonthweb":393,"../datostwit":394,"../layout":402,"../menu-lateral-ano":403,"../menu-lateral-mes":404,"../picture-card":407,"yo-yo":388}],398:[function(require,module,exports){
 'use strict';
 
 require('babel-polyfill');
@@ -21014,9 +21014,88 @@ var uploadtw = require('./upload-dates-web');
 var invaliduser = require('./userinvalid');
 var uploadp = require('./uploadp');
 var updatefb = require('./update-datesfb');
+var instagram = require('./instagram');
 page();
 
-},{"./homepage":396,"./nologged":403,"./signin":406,"./signup":408,"./update-datesfb":410,"./upload-dates":418,"./upload-dates-inst":412,"./upload-dates-tw":414,"./upload-dates-web":416,"./uploadp":420,"./userinvalid":422,"babel-polyfill":28,"page":361}],399:[function(require,module,exports){
+},{"./homepage":396,"./instagram":399,"./nologged":405,"./signin":408,"./signup":410,"./update-datesfb":412,"./upload-dates":420,"./upload-dates-inst":414,"./upload-dates-tw":416,"./upload-dates-web":418,"./uploadp":422,"./userinvalid":424,"babel-polyfill":28,"page":361}],399:[function(require,module,exports){
+'use strict';
+
+var page = require('page');
+var empty = require('empty-element');
+var template = require('./template');
+var title = require('title');
+
+page('/instagram', function (ctx, next) {
+  title('Evermetrics - Get Data from Instagram');
+  var main = document.getElementById('main-container');
+  empty(main).appendChild(template);
+});
+
+},{"./template":400,"empty-element":333,"page":361,"title":384}],400:[function(require,module,exports){
+'use strict';
+
+var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <button  class="btn"  onclick=', '>\n              Instagram\n              <i class="fa fa-instagram" aria-hidden="true"></i>\n          </button>\n        </div>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <button  class="btn"  onclick=', '>\n              Instagram\n              <i class="fa fa-instagram" aria-hidden="true"></i>\n          </button>\n        </div>\n      </div>\n    </div>']);
+
+function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var yo = require('yo-yo');
+var landing = require('../landing');
+var superagent = require('superagent');
+
+var instagram_btn = yo(_templateObject, instagramData);
+
+function instagramData() {
+  var TOKEN = '328393463.ce4bd1a.68cb1506b4574674a13040c1ba207668';
+
+  var counts = {};
+  var likes = {};
+  $.ajax({
+    url: 'https://api.instagram.com/v1/users/self/',
+    dataType: 'jsonp',
+    type: 'GET',
+    data: { access_token: TOKEN },
+    success: function success(res) {
+      return counts = res.data.counts;
+    },
+    error: function error(data) {
+      return console.log(data);
+    }
+  });
+
+  $.ajax({
+    url: 'https://api.instagram.com/v1/users/self/media/recent/',
+    dataType: 'jsonp',
+    type: 'GET',
+    data: { access_token: TOKEN },
+    success: function success(res) {
+      var media = res.data;
+
+      // sort by likes
+      media.sort(function (a, b) {
+        return b.likes.count - a.likes.count;
+      });
+      likes = media.slice(0, 3);
+
+      console.log(counts);
+      console.log(likes);
+    },
+    error: function error(data) {
+      return console.log(data);
+    }
+  });
+
+  superagent.post('/api/instagram').send(counts).end(function (err, res) {
+    if (err || !res.ok) {
+      console.log('Instagram Post Method Error');
+    } else {
+      console.log(res);
+    }
+  });
+}
+
+module.exports = landing(instagram_btn);
+
+},{"../landing":401,"superagent":380,"yo-yo":388}],401:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="container container-login">\n      <div class="row">\n        <div class="col l12">\n          <div class="row contLogoLanding">\n            <img src="logo-evermetrics.png"/>\n          </div>\n        </div>\n        ', '\n      </div>\n    </div>'], ['<div class="container container-login">\n      <div class="row">\n        <div class="col l12">\n          <div class="row contLogoLanding">\n            <img src="logo-evermetrics.png"/>\n          </div>\n        </div>\n        ', '\n      </div>\n    </div>']);
@@ -21029,7 +21108,7 @@ module.exports = function landing(box) {
   return yo(_templateObject, box);
 };
 
-},{"yo-yo":388}],400:[function(require,module,exports){
+},{"yo-yo":388}],402:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="content">\n     ', '\n    </div>'], ['<div class="content">\n     ', '\n    </div>']);
@@ -21042,7 +21121,7 @@ module.exports = function layout(content) {
   return yo(_templateObject, content);
 };
 
-},{"yo-yo":388}],401:[function(require,module,exports){
+},{"yo-yo":388}],403:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<li class="current">\n      <a class="menu-lateral btn-datos-ano" id=\'hideshow\' href="#fb', '">', '</a>\n      <div class="collapsible-header">\n        <i class="fa fa-chevron-down rotate"  style="transition: all 2s linear;transform: rotate(0deg);float: right;font-size:12px;"></i>\n      </div>\n      <div class="collapsible-body">\n        <ul class=" menu-lateral">\n\n        </ul>\n      </div>\n    </li>'], ['<li class="current">\n      <a class="menu-lateral btn-datos-ano" id=\'hideshow\' href="#fb', '">', '</a>\n      <div class="collapsible-header">\n        <i class="fa fa-chevron-down rotate"  style="transition: all 2s linear;transform: rotate(0deg);float: right;font-size:12px;"></i>\n      </div>\n      <div class="collapsible-body">\n        <ul class=" menu-lateral">\n\n        </ul>\n      </div>\n    </li>']);
@@ -21055,7 +21134,7 @@ module.exports = function (dato) {
   return yo(_templateObject, dato.year, dato.year);
 };
 
-},{"yo-yo":388}],402:[function(require,module,exports){
+},{"yo-yo":388}],404:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['', ''], ['', '']),
@@ -21173,7 +21252,7 @@ function ultwi(ctx, dates, user, anomes, red) {
   }
 }
 
-},{"yo-yo":388}],403:[function(require,module,exports){
+},{"yo-yo":388}],405:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -21187,7 +21266,7 @@ page('/nologged', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":404,"empty-element":333,"page":361,"title":384}],404:[function(require,module,exports){
+},{"./template":406,"empty-element":333,"page":361,"title":384}],406:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="container container-login">\n    <div class="row">\n      <div class="col l12">\n        <div class="row">\n          <h1 class="titleNologged"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Necesitas iniciar sesi\xF3n para ver este contenido</h1>\n          <div class="contBtnLoggin">\n            <a href="/signin" class="btnLoggin">Iniciar sesi\xF3n</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>'], ['<div class="container container-login">\n    <div class="row">\n      <div class="col l12">\n        <div class="row">\n          <h1 class="titleNologged"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Necesitas iniciar sesi\xF3n para ver este contenido</h1>\n          <div class="contBtnLoggin">\n            <a href="/signin" class="btnLoggin">Iniciar sesi\xF3n</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>']);
@@ -21200,7 +21279,7 @@ var nologged = yo(_templateObject);
 
 module.exports = nologged;
 
-},{"yo-yo":388}],405:[function(require,module,exports){
+},{"yo-yo":388}],407:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="estadisticas">\n       <div id="fb', '', '" class="col m12 cont-datos tab-content-datos">\n         <div class="contHeaderVisual">\n           <div class="contTitleVisual">\n             <h4 class="title-mes">', ' - ', '</h4>\n           </div>\n           <div class="logo-cliente">\n             <img src="', '"  />\n           </div>\n         </div>\n         <h4>Crecimiento</h4>\n             <div class="row">\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-users" aria-hidden="true"></i> Fans Totales</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Fans Nuevos</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> No me Gusta</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n             </div>\n             <div class="row">\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-exchange" aria-hidden="true"></i> Impresi\xF3n</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-user" aria-hidden="true"></i> Usuarios Activos</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Me Gusta (promedio x d\xEDa)</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n             </div>\n             <div class="row">\n               <div class="col m6 cont-variables">\n                 <h5><i class="fa fa-newspaper-o" aria-hidden="true"></i> Post en el mes</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m6 cont-variables">\n                 <h5><i class="fa fa-line-chart" aria-hidden="true"></i> Alcance (promedio por d\xEDa)</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n             </div>\n\n         <h4>Interacci\xF3n</h4>\n           <div class="row">\n             <div class="col m6 cont-variables">\n               <h5><i class="fa fa-external-link" aria-hidden="true"></i> Referencias Externas</h5>\n               <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n             </div>\n             <div class="col m6 cont-variables">\n               <h5><i class="fa fa-window-restore" aria-hidden="true"></i> Vistas Pesta\xF1as</h5>\n               <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n             </div>\n           </div>\n           <div class="row">\n             <div class="col m6 cont-variables">\n               <h5><i class="fa fa-window-maximize" aria-hidden="true"></i> Principales Pesta\xF1as</h5>\n               <p>', '</p>\n             </div>\n             <div class="col m6 cont-variables">\n               <h5><i class="fa fa-link" aria-hidden="true"></i> Principales Referencias</h5>\n               <p>', '</p>\n             </div>\n           </div>\n         <h4>Contenido</h4>\n           <div class="row">\n               <div class="col m6 cont-variables">\n                 <h5><i class="fa fa-picture-o" aria-hidden="true"></i> Post m\xE1s efectivo</h5>\n                 <img src="', '" style="width:100%" />\n               </div>\n               <div class="col m6 cont-variables">\n                 <h5><i class="fa fa-file-text-o" aria-hidden="true"></i> Datos del post</h5>\n                 <p>', '</p>\n               </div>\n           </div>\n       </div>\n  </div>'], ['<div class="estadisticas">\n       <div id="fb', '', '" class="col m12 cont-datos tab-content-datos">\n         <div class="contHeaderVisual">\n           <div class="contTitleVisual">\n             <h4 class="title-mes">', ' - ', '</h4>\n           </div>\n           <div class="logo-cliente">\n             <img src="', '"  />\n           </div>\n         </div>\n         <h4>Crecimiento</h4>\n             <div class="row">\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-users" aria-hidden="true"></i> Fans Totales</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Fans Nuevos</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> No me Gusta</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n             </div>\n             <div class="row">\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-exchange" aria-hidden="true"></i> Impresi\xF3n</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-user" aria-hidden="true"></i> Usuarios Activos</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m4 cont-variables">\n                 <h5><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Me Gusta (promedio x d\xEDa)</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n             </div>\n             <div class="row">\n               <div class="col m6 cont-variables">\n                 <h5><i class="fa fa-newspaper-o" aria-hidden="true"></i> Post en el mes</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n               <div class="col m6 cont-variables">\n                 <h5><i class="fa fa-line-chart" aria-hidden="true"></i> Alcance (promedio por d\xEDa)</h5>\n                 <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n               </div>\n             </div>\n\n         <h4>Interacci\xF3n</h4>\n           <div class="row">\n             <div class="col m6 cont-variables">\n               <h5><i class="fa fa-external-link" aria-hidden="true"></i> Referencias Externas</h5>\n               <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n             </div>\n             <div class="col m6 cont-variables">\n               <h5><i class="fa fa-window-restore" aria-hidden="true"></i> Vistas Pesta\xF1as</h5>\n               <p id="count-number" class="timer count-title" data-to="', '" data-speed="1500"></p>\n             </div>\n           </div>\n           <div class="row">\n             <div class="col m6 cont-variables">\n               <h5><i class="fa fa-window-maximize" aria-hidden="true"></i> Principales Pesta\xF1as</h5>\n               <p>', '</p>\n             </div>\n             <div class="col m6 cont-variables">\n               <h5><i class="fa fa-link" aria-hidden="true"></i> Principales Referencias</h5>\n               <p>', '</p>\n             </div>\n           </div>\n         <h4>Contenido</h4>\n           <div class="row">\n               <div class="col m6 cont-variables">\n                 <h5><i class="fa fa-picture-o" aria-hidden="true"></i> Post m\xE1s efectivo</h5>\n                 <img src="', '" style="width:100%" />\n               </div>\n               <div class="col m6 cont-variables">\n                 <h5><i class="fa fa-file-text-o" aria-hidden="true"></i> Datos del post</h5>\n                 <p>', '</p>\n               </div>\n           </div>\n       </div>\n  </div>']);
@@ -21213,7 +21292,7 @@ module.exports = function (ctx, dato) {
   return yo(_templateObject, dato.year, dato.month, dato.month, dato.year, ctx.auth.src, dato.allfans || 0, dato.newfans || 0, dato.nolikes || 0, dato.prints || 0, dato.activeusers || 0, dato.likebyday || 0, dato.postbymonth || 0, dato.scopebyday || 0, dato.externalreference || 0, dato.viewswindows || 0, dato.topwindows || 0, dato.topreference || 0, dato.postsrc, dato.datespost);
 };
 
-},{"yo-yo":388}],406:[function(require,module,exports){
+},{"yo-yo":388}],408:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -21227,7 +21306,7 @@ page('/signin', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":407,"empty-element":333,"page":361,"title":384}],407:[function(require,module,exports){
+},{"./template":409,"empty-element":333,"page":361,"title":384}],409:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n          <form class="signup-form" action="/login" method="POST">\n            <div class="section cont-form-login" style="text-align:center;">\n              <input type="text" name="username" placeholder="Nombre de usuario">\n              <input type="password" name="password" placeholder="Contrase\xF1a">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Iniciar sesi\xF3n</button>\n            </div>\n          </form>\n        </div>\n        <div class="row hide">\n          <a href="/signup">No tienes una cuenta</a>\n        </div>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n          <form class="signup-form" action="/login" method="POST">\n            <div class="section cont-form-login" style="text-align:center;">\n              <input type="text" name="username" placeholder="Nombre de usuario">\n              <input type="password" name="password" placeholder="Contrase\xF1a">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Iniciar sesi\xF3n</button>\n            </div>\n          </form>\n        </div>\n        <div class="row hide">\n          <a href="/signup">No tienes una cuenta</a>\n        </div>\n      </div>\n    </div>']);
@@ -21241,7 +21320,7 @@ var loginform = yo(_templateObject);
 
 module.exports = landing(loginform);
 
-},{"../landing":399,"yo-yo":388}],408:[function(require,module,exports){
+},{"../landing":401,"yo-yo":388}],410:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -21255,7 +21334,7 @@ page('/signup', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":409,"empty-element":333,"page":361,"title":384}],409:[function(require,module,exports){
+},{"./template":411,"empty-element":333,"page":361,"title":384}],411:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n          <form id="formUpload" enctype="multipart/form-data" class="signup-form form-upload" method="POST" onsubmit=', '>\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="name" placeholder="Nombre">\n              <input type="email" name="email" placeholder="Email">\n              <input type="text" name="username" placeholder="Nombre de usuario">\n              <input type="password" name="password" placeholder="Contrase\xF1a">\n              <div class="contBtnLogo">\n                <div id="fileName" class="fileUpload btn cyan">\n                  <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir logo</span>\n                  <input required name="logo" id="file" type="file" class="upload" onchange=', ' />\n                </div>\n                <button id="btnCancel" type="button" class="btn red hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n              </div>\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrate</button>\n            </div>\n          </form>\n        </div>\n        <div class="row">\n          <a href="/signin">Tienes una cuenta</a>\n        </div>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n          <form id="formUpload" enctype="multipart/form-data" class="signup-form form-upload" method="POST" onsubmit=', '>\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="name" placeholder="Nombre">\n              <input type="email" name="email" placeholder="Email">\n              <input type="text" name="username" placeholder="Nombre de usuario">\n              <input type="password" name="password" placeholder="Contrase\xF1a">\n              <div class="contBtnLogo">\n                <div id="fileName" class="fileUpload btn cyan">\n                  <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir logo</span>\n                  <input required name="logo" id="file" type="file" class="upload" onchange=', ' />\n                </div>\n                <button id="btnCancel" type="button" class="btn red hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n              </div>\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrate</button>\n            </div>\n          </form>\n        </div>\n        <div class="row">\n          <a href="/signin">Tienes una cuenta</a>\n        </div>\n      </div>\n    </div>']);
@@ -21292,7 +21371,7 @@ function onsubmit(ev) {
 
 module.exports = landing(signupForm);
 
-},{"../landing":399,"superagent":380,"yo-yo":388}],410:[function(require,module,exports){
+},{"../landing":401,"superagent":380,"yo-yo":388}],412:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -21306,7 +21385,7 @@ page('/update-datesfb', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":411,"empty-element":333,"page":361,"title":384}],411:[function(require,module,exports){
+},{"./template":413,"empty-element":333,"page":361,"title":384}],413:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <input type="button"  class="btn" value="Actualizar" onclick=', '>\n        </div>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <input type="button"  class="btn" value="Actualizar" onclick=', '>\n        </div>\n      </div>\n    </div>']);
@@ -22149,7 +22228,7 @@ function reachPage() {
 
 module.exports = landing(updatebtn);
 
-},{"../landing":399,"yo-yo":388}],412:[function(require,module,exports){
+},{"../landing":401,"yo-yo":388}],414:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -22163,7 +22242,7 @@ page('/upload-dates-inst', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":413,"empty-element":333,"page":361,"title":384}],413:[function(require,module,exports){
+},{"./template":415,"empty-element":333,"page":361,"title":384}],415:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito" class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas-inst" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="inst" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Total seguidores">\n              <input type="text" name="follows" placeholder="Total seguidos">\n              <input type="text" name="allpost" placeholder="Total post">\n              <input type="text" name="postbymonth" placeholder="Post en el mes">\n              <input type="text" name="likebymonth" placeholder="Like en el mes">\n              <input type="text" name="comments" placeholder="Comentarios">\n              <label>Usuarios activos</label>\n              <input type="text" name="nick1" placeholder="Usuario 1">\n              <input type="text" name="likes1" placeholder="Me gustas">\n              <input type="text" name="nick2" placeholder="Usuario 2">\n              <input type="text" name="likes2" placeholder="Me gustas">\n              <input type="text" name="nick3" placeholder="Usuario 3">\n              <input type="text" name="likes3" placeholder="Me gustas">\n              <input type="text" name="src" placeholder="Imagen">\n              <input type="text" name="likesone" placeholder="Me gustas post 1">\n              <input type="text" name="likestwo" placeholder="Me gustas post 1">\n              <input type="text" name="likesthree" placeholder="Me gustas post 1">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito" class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas-inst" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="inst" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Total seguidores">\n              <input type="text" name="follows" placeholder="Total seguidos">\n              <input type="text" name="allpost" placeholder="Total post">\n              <input type="text" name="postbymonth" placeholder="Post en el mes">\n              <input type="text" name="likebymonth" placeholder="Like en el mes">\n              <input type="text" name="comments" placeholder="Comentarios">\n              <label>Usuarios activos</label>\n              <input type="text" name="nick1" placeholder="Usuario 1">\n              <input type="text" name="likes1" placeholder="Me gustas">\n              <input type="text" name="nick2" placeholder="Usuario 2">\n              <input type="text" name="likes2" placeholder="Me gustas">\n              <input type="text" name="nick3" placeholder="Usuario 3">\n              <input type="text" name="likes3" placeholder="Me gustas">\n              <input type="text" name="src" placeholder="Imagen">\n              <input type="text" name="likesone" placeholder="Me gustas post 1">\n              <input type="text" name="likestwo" placeholder="Me gustas post 1">\n              <input type="text" name="likesthree" placeholder="Me gustas post 1">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>']);
@@ -22212,7 +22291,7 @@ function onsubmit(ev) {
 
 module.exports = landing(upforminst);
 
-},{"../landing":399,"superagent":380,"yo-yo":388}],414:[function(require,module,exports){
+},{"../landing":401,"superagent":380,"yo-yo":388}],416:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -22226,7 +22305,7 @@ page('/upload-dates-tw', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":415,"empty-element":333,"page":361,"title":384}],415:[function(require,module,exports){
+},{"./template":417,"empty-element":333,"page":361,"title":384}],417:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito"class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas-tw" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="tw" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Total seguidores">\n              <input type="text" name="allfollows" placeholder="Total seguidos">\n              <input type="text" name="newfans" placeholder="Nuevos seguidores">\n              <input type="text" name="globalmedia" placeholder="Fotos / Videos Globales">\n              <input type="text" name="globalfavorites" placeholder="Favoritos Globales">\n              <input type="text" name="alltweets" placeholder="Total tweets">\n              <input type="text" name="tweets" placeholder="Tweets">\n              <input type="text" name="retweets" placeholder="Retweets">\n              <input type="text" name="mentions" placeholder="Menciones">\n              <input type="text" name="favorites" placeholder="Favoritos">\n              <input type="text" name="messagedirects" placeholder="Mensajes directos">\n              <label>Hashtags</label>\n              <input type="text" name="label1" placeholder="Hashtag 1">\n              <input type="text" name="cant1" placeholder="Veces usadas">\n              <input type="text" name="label2" placeholder="Hashtag 2">\n              <input type="text" name="cant2" placeholder="Veces usadas">\n              <input type="text" name="label3" placeholder="Hashtag 3">\n              <input type="text" name="cant3" placeholder="Veces usadas">\n              <input type="text" name="label4" placeholder="Hashtag 4">\n              <input type="text" name="cant4" placeholder="Veces usadas">\n              <input type="text" name="label5" placeholder="Hashtag 5">\n              <input type="text" name="cant5" placeholder="Veces usadas">\n              <input type="text" name="label6" placeholder="Hashtag 6">\n              <input type="text" name="cant6" placeholder="Veces usadas">\n              <input type="text" name="label7" placeholder="Hashtag 7">\n              <input type="text" name="cant7" placeholder="Veces usadas">\n              <input type="text" name="label8" placeholder="Hashtag 8">\n              <input type="text" name="cant8" placeholder="Veces usadas">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito"class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas-tw" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="tw" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Total seguidores">\n              <input type="text" name="allfollows" placeholder="Total seguidos">\n              <input type="text" name="newfans" placeholder="Nuevos seguidores">\n              <input type="text" name="globalmedia" placeholder="Fotos / Videos Globales">\n              <input type="text" name="globalfavorites" placeholder="Favoritos Globales">\n              <input type="text" name="alltweets" placeholder="Total tweets">\n              <input type="text" name="tweets" placeholder="Tweets">\n              <input type="text" name="retweets" placeholder="Retweets">\n              <input type="text" name="mentions" placeholder="Menciones">\n              <input type="text" name="favorites" placeholder="Favoritos">\n              <input type="text" name="messagedirects" placeholder="Mensajes directos">\n              <label>Hashtags</label>\n              <input type="text" name="label1" placeholder="Hashtag 1">\n              <input type="text" name="cant1" placeholder="Veces usadas">\n              <input type="text" name="label2" placeholder="Hashtag 2">\n              <input type="text" name="cant2" placeholder="Veces usadas">\n              <input type="text" name="label3" placeholder="Hashtag 3">\n              <input type="text" name="cant3" placeholder="Veces usadas">\n              <input type="text" name="label4" placeholder="Hashtag 4">\n              <input type="text" name="cant4" placeholder="Veces usadas">\n              <input type="text" name="label5" placeholder="Hashtag 5">\n              <input type="text" name="cant5" placeholder="Veces usadas">\n              <input type="text" name="label6" placeholder="Hashtag 6">\n              <input type="text" name="cant6" placeholder="Veces usadas">\n              <input type="text" name="label7" placeholder="Hashtag 7">\n              <input type="text" name="cant7" placeholder="Veces usadas">\n              <input type="text" name="label8" placeholder="Hashtag 8">\n              <input type="text" name="cant8" placeholder="Veces usadas">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>']);
@@ -22273,7 +22352,7 @@ function onsubmit(ev) {
 
 module.exports = landing(upformtw);
 
-},{"../landing":399,"superagent":380,"yo-yo":388}],416:[function(require,module,exports){
+},{"../landing":401,"superagent":380,"yo-yo":388}],418:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -22287,7 +22366,7 @@ page('/upload-dates-web', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":417,"empty-element":333,"page":361,"title":384}],417:[function(require,module,exports){
+},{"./template":419,"empty-element":333,"page":361,"title":384}],419:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-globe" aria-hidden="true"></i>Web Analytics</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito"class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-globe" aria-hidden="true"></i>Web Analytics</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito"class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>']);
@@ -22334,7 +22413,7 @@ function onsubmit(ev) {
 
 module.exports = landing(upformweb);
 
-},{"../landing":399,"superagent":380,"yo-yo":388}],418:[function(require,module,exports){
+},{"../landing":401,"superagent":380,"yo-yo":388}],420:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -22348,7 +22427,7 @@ page('/upload-dates', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":419,"empty-element":333,"page":361,"title":384}],419:[function(require,module,exports){
+},{"./template":421,"empty-element":333,"page":361,"title":384}],421:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row" >\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito" class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="fb" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" value="2017" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Fans totales">\n              <input type="text" name="newfans" placeholder="Fans nuevos">\n              <input type="text" name="prints" placeholder="Impresiones">\n              <input type="text" name="nolikes" placeholder="No me gustas">\n              <input type="text" name="activeusers" placeholder="Usuarios activos">\n              <input type="text" name="likebyday" placeholder="Me Gusta (promedio por d\xEDa)">\n              <input type="text" name="postbymonth" placeholder="Post en el mes">\n              <input type="text" name="scopebyday" placeholder="Alcance (promedio por d\xEDa)">\n              <input type="text" name="externalreference" placeholder="Referencias Externas">\n              <input type="text" name="viewswindows" placeholder="Vistas Pesta\xF1as">\n              <input type="text" name="topwindows" placeholder="Principales Pesta\xF1as">\n              <input type="text" name="topreference" placeholder="Principales Referencias">\n              <input type="text" name="postsrc" placeholder="Post m\xE1s efectivo">\n              <input type="text" name="datespost" placeholder="Datos del post">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row"  style="display:none;">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <div class="contFecha" style="display:flex;">\n             <div style="flex:1;text-align: right;padding: 0 10px;"><input type="date" id="since" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n             <div style="flex:1;text-align: left;"><input type="date" id="until" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n          </div>\n          <input type="button"  class="btn" value="Cargar fecha" onclick=', '></input>\n          <input type="button" id="actualizarfb" class="btn hide" value="Actualizar" onclick=', '></input>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row" >\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito" class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="fb" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" value="2017" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Fans totales">\n              <input type="text" name="newfans" placeholder="Fans nuevos">\n              <input type="text" name="prints" placeholder="Impresiones">\n              <input type="text" name="nolikes" placeholder="No me gustas">\n              <input type="text" name="activeusers" placeholder="Usuarios activos">\n              <input type="text" name="likebyday" placeholder="Me Gusta (promedio por d\xEDa)">\n              <input type="text" name="postbymonth" placeholder="Post en el mes">\n              <input type="text" name="scopebyday" placeholder="Alcance (promedio por d\xEDa)">\n              <input type="text" name="externalreference" placeholder="Referencias Externas">\n              <input type="text" name="viewswindows" placeholder="Vistas Pesta\xF1as">\n              <input type="text" name="topwindows" placeholder="Principales Pesta\xF1as">\n              <input type="text" name="topreference" placeholder="Principales Referencias">\n              <input type="text" name="postsrc" placeholder="Post m\xE1s efectivo">\n              <input type="text" name="datespost" placeholder="Datos del post">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row"  style="display:none;">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <div class="contFecha" style="display:flex;">\n             <div style="flex:1;text-align: right;padding: 0 10px;"><input type="date" id="since" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n             <div style="flex:1;text-align: left;"><input type="date" id="until" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n          </div>\n          <input type="button"  class="btn" value="Cargar fecha" onclick=', '></input>\n          <input type="button" id="actualizarfb" class="btn hide" value="Actualizar" onclick=', '></input>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>']);
@@ -22913,7 +22992,7 @@ function createObject(token, sinceR, untilR, callback) {
 
 module.exports = landing(upform);
 
-},{"../landing":399,"superagent":380,"yo-yo":388}],420:[function(require,module,exports){
+},{"../landing":401,"superagent":380,"yo-yo":388}],422:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -22927,7 +23006,7 @@ page('/uploadp', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":421,"empty-element":333,"page":361,"title":384}],421:[function(require,module,exports){
+},{"./template":423,"empty-element":333,"page":361,"title":384}],423:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n        <form class="signup-form formUploadPost" action="/api/prueba" method="POST" enctype="multipart/form-data">\n        <input type="file" name="filep" style="border:0;" />\n        <input class="btn" type="submit" value="Upload Image" name="submit" style="color:white;padding:0 20px;margin-top:30px;">\n        </form>\n\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n        <form class="signup-form formUploadPost" action="/api/prueba" method="POST" enctype="multipart/form-data">\n        <input type="file" name="filep" style="border:0;" />\n        <input class="btn" type="submit" value="Upload Image" name="submit" style="color:white;padding:0 20px;margin-top:30px;">\n        </form>\n\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>']);
@@ -22942,7 +23021,7 @@ var upform = yo(_templateObject);
 
 module.exports = landing(upform);
 
-},{"../landing":399,"superagent":380,"yo-yo":388}],422:[function(require,module,exports){
+},{"../landing":401,"superagent":380,"yo-yo":388}],424:[function(require,module,exports){
 'use strict';
 
 var page = require('page');
@@ -22956,7 +23035,7 @@ page('/userinvalid', function (ctx, next) {
   empty(main).appendChild(template);
 });
 
-},{"./template":423,"empty-element":333,"page":361,"title":384}],423:[function(require,module,exports){
+},{"./template":425,"empty-element":333,"page":361,"title":384}],425:[function(require,module,exports){
 'use strict';
 
 var _templateObject = _taggedTemplateLiteral(['<div class="container container-login">\n    <div class="row">\n    <div class="col l12">\n          <div class="row">\n            <h1 class="titleNologged titleError"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Usuario y/o contrase\xF1a no es v\xE1lido</h1>\n          </div>\n          <div class="contBtnLoggin" style="margin-top:20px !important;">\n            <a href="/signin" class="btnLoggin">Volver a intentarlo</a>\n          </div>\n        </div>\n    </div>\n  </div>'], ['<div class="container container-login">\n    <div class="row">\n    <div class="col l12">\n          <div class="row">\n            <h1 class="titleNologged titleError"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Usuario y/o contrase\xF1a no es v\xE1lido</h1>\n          </div>\n          <div class="contBtnLoggin" style="margin-top:20px !important;">\n            <a href="/signin" class="btnLoggin">Volver a intentarlo</a>\n          </div>\n        </div>\n    </div>\n  </div>']);
@@ -22969,7 +23048,7 @@ var invalid = yo(_templateObject);
 
 module.exports = invalid;
 
-},{"yo-yo":388}],424:[function(require,module,exports){
+},{"yo-yo":388}],426:[function(require,module,exports){
 'use strict';
 
 var axios = require('axios');

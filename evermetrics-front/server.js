@@ -134,6 +134,10 @@ app.get('/upload-dates-web', ensureAuth, function (req, res) {
   res.render('index', { title:'Evermetrics - Upload Stadistitics Web Analytics' });
 })
 
+app.get('/instagram', ensureAuth, function (req, res) {
+  res.render('index', { title:'Evermetrics - Instagram data' });
+})
+
 app.post('/login', passport.authenticate('local', {
   successRedirect: '/',
   failureRedirect: '/userinvalid'
@@ -198,6 +202,43 @@ app.post('/api/pictures', ensureAuth, function (req, res) {
     res.send(`File uploaded`);
   })
 })
+
+app.post('/api/instagram', ensureAuth, function (req, res) {
+  console.log("Api Instagram Post");
+
+  var user = req.user;
+  var username = req.user.username;
+  var data = req.body;
+  console.log(data);
+
+  client.saveEstadisticas({
+    type: 'month',
+    postbymonth: '150',
+    likebymonth: '0',
+    comments: '120',
+    red: 'inst',
+    year: '2017',
+    month: 'Julio',
+    allpost: data.media,
+    follows: data.follows,
+    allfans: data.followed_by,
+    userId: username,
+    topposts: {
+      src: 'https://scontent.feoh1-1.fna.fbcdn.net/v/t1.0-9/20106602_1465676713497960_3358989977321708475_n.png?oh=a846a3b27db0e4b9fc9c98f960a1d9f6&oe=59FE546F',
+      likesone: '1200',
+      likestwo: '100',
+      likesthree: '10'
+    },
+    user: {
+      username: username,
+      avatar: user.avatar,
+      name: user.name
+    }
+  }, function (err, img) {
+    if (err) return res.status(500).send(err.message);
+    res.send(`Instagram Data Sent Successfully`);
+  })
+});
 
 // ruta post de facebook
 app.post('/api/estadisticas', ensureAuth, function (req, res) {
@@ -967,5 +1008,5 @@ app.post('/api/estadisticas-web', ensureAuth, function (req, res) {
 app.listen(port, function (err) {
   if(err) return console.log('Hubo un error'), process.exit(1);// con esto le indicamos que hubo un error pasandole por parametro un num distinto de cero
 
-  console.log('evermetrics escuchando en el puerto 5050');
+  console.log('Listening on http://localhost:5050');
 })//Acá lanzamos el servidor web, le decimos que en el puerto 3000 y ponemos una función que toma un error en caso que lo haya y preguntamos si hubo un error y retornamos un mensaje
