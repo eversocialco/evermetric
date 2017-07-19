@@ -199,10 +199,11 @@ app.post('/api/pictures', ensureAuth, function (req, res) {
   })
 })
 
+// ruta post de facebook
 app.post('/api/estadisticas', ensureAuth, function (req, res) {
    console.log("entró a la ruta post de api");
 
-    /*var user = req.user;
+   /*var user = req.user;
     var username = req.user.username;
     var dates = req.body;
     console.log(dates);
@@ -238,8 +239,7 @@ app.post('/api/estadisticas', ensureAuth, function (req, res) {
       res.send(`File uploaded`);
     })*/
 
-
-  upload(req, res, function(err){
+ upload(req, res, function(err){
     if(err) {
       console.log("entró al if");
       return res.send(500, "Error uploading file");
@@ -427,6 +427,7 @@ app.post('/api/estadisticas', ensureAuth, function (req, res) {
 
 })
 
+//Instagram
 app.post('/api/estadisticas-inst', ensureAuth, function (req, res) {
   console.log("entró a la ruta post de api");
   upload(req, res, function(err){
@@ -519,6 +520,7 @@ app.post('/api/estadisticas-inst', ensureAuth, function (req, res) {
   })
 })
 
+//twitter
 app.post('/api/estadisticas-tw', ensureAuth, function (req, res) {
   upload(req, res, function(err){
     if(err) {
@@ -611,6 +613,7 @@ app.post('/api/estadisticas-tw', ensureAuth, function (req, res) {
 
 })
 
+//analytics web
 app.post('/api/estadisticas-web', ensureAuth, function (req, res) {
   upload(req, res, function(err){
     if(err) {

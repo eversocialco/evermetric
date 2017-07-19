@@ -5,7 +5,7 @@ var datafb = [];
 var datajson = "";
 
 var upform = yo`<div class="col l12">
-      <div class="row" style="display:none;">
+      <div class="row" >
         <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">
         <h3 class="titleUploadred"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</h3>
           <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=${onsubmit}>
@@ -16,7 +16,7 @@ var upform = yo`<div class="col l12">
             <button id="btnUpload" type="submit" class="btn hide">Subir</button>
             <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=${cancel}><i class="fa fa-times" aria-hidden="true"></i></button>
           </form>
-           <span id="fotoUpExito"class="hide">El archivo se ha subido con éxito.</span>
+           <span id="fotoUpExito" class="hide">El archivo se ha subido con éxito.</span>
         </div>
       </div>
       <div class="row" style="display:none;">
@@ -47,7 +47,7 @@ var upform = yo`<div class="col l12">
           </form>
         </div>
       </div>
-      <div class="row">
+      <div class="row"  style="display:none;">
         <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">
           <div class="contFecha" style="display:flex;">
              <div style="flex:1;text-align: right;padding: 0 10px;"><input type="date" id="since" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>
@@ -83,7 +83,6 @@ var upform = yo`<div class="col l12">
         .post('/api/estadisticas')
         .send(data)
         .end(function(err, res){
-          console.log(arguments); //arguments es una array de todos lo parametros que recibe una función
           toggleButtons();
           document.getElementById('formUpload').reset();
           document.getElementById("fotoUpExito").classList.toggle("hide");
@@ -98,17 +97,21 @@ var upform = yo`<div class="col l12">
     }
 
     function inicializarApi(){
-      var token= 'EAACEdEose0cBAColET0Fxy7ZCdPBDxcp5ZBJGu23kEMWH7EkaBlxn2rEY2pDg6vmVzuciQ765oGqAZCjF7Fbdm09wRbh28MyacbsSDXemYn7IcFkChsQUoMZA5VZA1ojysIyPh3S18K2FU9Bt8zZCFz9yTHGfTy5a1UwTHK5GByc0K4Iq7oNkFuWKZCQMRSe2YZD';
+      var token= 'EAACEdEose0cBAEhcYmrtuZAUE8jbStJsHYx9l9nohnPAdoHAJtwMf1lBwdcInzVtZAA5LRQxFD7mx5cagQiu1ygZArv8VsyUkgwlV5lmZCbDwjl7Oit5VwZCQqZCllBY8sqmbKib8ClkbHn8CKecMIDuFymG4GV66eARfJvSnpxhO9Djf1BDNEE8dG3dVOKZBcZD';
       var dateSince = document.getElementById('since').value;
       var dateUntil = document.getElementById('until').value;
 
+      console.log(dateSince);
+      console.log(dateUntil);
       function splitDate(date){
           var result = date.split('-');
+          console.log(result);
           return result;
+
       }
-      var dateSince = document.getElementById('since').value;
 
       var nowkdate = splitDate(dateSince);
+      console.log(nowkdate);
       var yearspl = nowkdate[0];
       var monthspl = parseInt(nowkdate[1]);
       console.log(yearspl);
@@ -165,13 +168,13 @@ var upform = yo`<div class="col l12">
       var dayp = ("0" + myDate.getDate()).slice(-2);*/
 
       dateSince += " 00:00:00";
-      dateUntil += " 00:00:00";
+      dateUntil += " 23:59:59";
 
       var sinceR = Date.parse(dateSince+"-0500")/1000;
       var untilR = Date.parse(dateUntil+"-0500")/1000;
 
       createObject(token, sinceR, untilR, function(key, dato){
-           datafb.push(dato);
+           /*datafb.push(dato);*/
            datajson += '"'+ key + '":"' + dato + '", ';
            /*if(dato.length>1){
                console.log(dato);
@@ -181,6 +184,7 @@ var upform = yo`<div class="col l12">
            }*/
        });
        toggleButtonAct();
+
     }
 
     function toggleButtonAct(){
@@ -203,6 +207,7 @@ var upform = yo`<div class="col l12">
     }
 
     function subir(red, type, month, year){
+      console.log(datajson);
       var objeto ='{';
       objeto +=datajson;
       objeto +='"red":"'+red+'",';
@@ -360,7 +365,7 @@ var upform = yo`<div class="col l12">
                     numDias = datos.values.length;
                   })
                   var promedioDia = megustapro / numDias;
-                  promedioDia = parseInt(promedioDia, 10);
+                  promedioDia = parseInt(promedioDia, 10);//pasar el nùmero a entero
                   console.log(promedioDia + ' Promedio por día');
                   var key = "promLikesByDay";
                   callback(key, promedioDia);
@@ -460,14 +465,7 @@ var upform = yo`<div class="col l12">
                    })
                  })
 
-                 /*console.log(objectmayor + ' mayor');
-                 console.log(objectmedio + ' medio');
-                 console.log(objecter + ' menor');*/
-                 var arrayPrinRef = [objectmayor,objectmedio,objecter];
-                 console.log(arrayPrinRef);
-                /* var cadenaPrinRef = objectmayor[0] + ': ' + objectmayor[1] + '\n'
-                   + objectmedio[0] + ': ' + objectmedio[1] + '\n'
-                   + objecter[0] + ': ' + objecter[1];*/
+
                 var cadenaPrinRef = objectmayor[0] + ': ' + objectmayor[1] + ' ' + objectmedio[0] + ': ' + objectmedio[1] + ' ' + objecter[0] + ': ' + objecter[1];
                  var key = "princRef";
                  callback(key, cadenaPrinRef);
@@ -650,13 +648,13 @@ var upform = yo`<div class="col l12">
                    var messagePost = response.posts.data[posicionBest].message;
                    var link = response.posts.data[posicionBest].link;
                    var rutaImg = response.posts.data[posicionBest].full_picture;
-                   if(response.posts.data[posicionBest] !== undefined ){
+                   /*if(response.posts.data[posicionBest] !== undefined ){
                      response.posts.data[posicionBest].likes.data.map(function(valor){
                        numLikes = response.posts.data[posicionBest].likes.data.length;
                      })
                    }else{
                        numLikes = 0;
-                   }
+                   }*/
 
                    if(response.posts.data[posicionBest].comments !== undefined){
                      response.posts.data[posicionBest].comments.data.map(function(valor){

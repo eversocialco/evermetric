@@ -20205,853 +20205,6 @@ var socket = io.connect('http://ws.evermetric.co');
 page('/', utils.loadAuth, header, loadestadisticas, function (ctx, next) {
   title('Evermetrics');
   var main = document.getElementById('main-container');
-  /*
-    var dates = [
-      {
-      activeusers:  '126' ,
-      allfans:  '1741' ,
-      createdAt: 'Fri Jan 20 2017 20:52:51 GMT+00:00' ,
-      datespost: 'Fecha | 10 de diciembre Me gusta | 4 Comentarios | NaN Compartido | 0 Alcance | 974 Otros clics | 1' ,
-      externalreference:  '0' ,
-      id:  'b6eff089-2157-4764-8397-89ca5778de4d' ,
-      likebyday:  '0' ,
-      month:  'diciembre' ,
-      newfans:  '5' ,
-      nolikes:  '8' ,
-      postbymonth:  '0' ,
-      postsrc:  '0' ,
-      prints:  '53444' ,
-      publicId:  '5zcfSSrx61PdE2G5c53OmV' ,
-      red:  'fb' ,
-      scopebyday:  '0' ,
-      topreference:  '0' ,
-      topwindows:  'Timeline: 2 Fotos: 1 Info: 1 Profile: 3 Me gusta: 1' ,
-      type:  'month' ,
-      user: {
-      avatar:  '//www.gravatar.com/avatar/306ca5c630cf0832b6c84449f6bd6b23' ,
-      name:  'Eversocial' ,
-      username:  'eversocial'
-      } ,
-      userId:  'eversocial' ,
-      viewswindows:  '57' ,
-      year:  '2016'
-      },
-      {
-        red: 'fb',
-        type: 'year',
-        genre: {
-            women:'56.44',
-            men:'43.56'
-        },
-        age: {
-            ppal:'32.71',
-            others:'67.29'
-        },
-        language: {
-            ppal:'86.43',
-            others:'13.57'
-        },
-        country: {
-            ppal:'91.45',
-            sec:'4.3',
-            others:'4.25'
-        },
-        city: {
-            ppal:'50.48',
-            sec:'17.67',
-            others:'31.85'
-        },
-        activeusers: {
-            total:'2018',
-            months: {
-              septiembre:'3143',
-              octubre:'1751',
-              noviembre:'273',
-              diciembre: '2486'
-            }
-        },
-        allfans: {
-            total:'2018',
-            months: {
-              septiembre:'1443',
-              octubre:'1469',
-              noviembre:'1510',
-              diciembre: '1535'
-            }
-        },
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f678' ,
-        newfans: {
-            total:'2018',
-            months: {
-              septiembre:'114',
-              octubre:'35',
-              noviembre:'50',
-              diciembre: '40'
-            }
-        },
-        nolikes: {
-            total:'2018',
-            months: {
-              septiembre:'10',
-              octubre:'7',
-              noviembre:'12',
-              diciembre: '12'
-            }
-        },
-        prints: {
-            total:'2018',
-            months: {
-              septiembre:'172405',
-              octubre:'190121',
-              noviembre:'161367',
-              diciembre: '113413'
-            }
-        },
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFE' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'Andrés Serna' ,
-        username:  'aserna'
-        } ,
-          userId:  'aserna' ,
-          year:  '2018'
-      },
-      {
-        red: 'fb',
-        type: 'month',
-        activeusers:  '23' ,
-        allfans:  '213' ,
-        createdAt: 'Tue Jan 17 2017 22:27:30 GMT+00:0' ,
-        id:  'e461f98f-7174-4e30-b14b-483a411d2969' ,
-        month:  'enero' ,
-        newfans:  '213' ,
-        nolikes:  '123' ,
-        prints:  '213' ,
-        publicId:  '6WX1yNDMOgpZ8VjWdMveMF' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/0ebebeaba5f3f923196c74099acf1a90' ,
-        name:  'andres serna' ,
-        username:  'aserna'
-        } ,
-        userId:  'aserna' ,
-        year:  '2018'
-      },
-      {
-        red: 'fb',
-        type: 'month',
-        activeusers:  '12' ,
-        allfans:  '20171' ,
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00¡' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        month:  'septiembre' ,
-        newfans:  '1' ,
-        nolikes:  '2' ,
-        likebyday: '0',
-        postbymonth: '0',
-        scopebyday: '0',
-        externalreference: '0',
-        viewswindows: '0',
-        topwindows: '0',
-        topreference: '0',
-        postsrc: '0',
-        datespost: '0',
-        prints:  '0' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'Andrés Serna' ,
-        username:  'aserna'
-        } ,
-        userId:  'aserna' ,
-        year:  '2017'
-      },
-      {
-        red: 'inst',
-        type: 'month',
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00¡' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        allfans:  '1731' ,
-        follows:  '017' ,
-        allpost:  '2017' ,
-        postbymonth: '232',
-        likebymonth: '123',
-        comments: '23',
-        usersppal: {
-          userone:{
-            nick: '@prueba',
-            likes: '10'
-          },
-          usertwo:{
-            nick: '@prueba2',
-            likes: '11'
-          },
-          userthree:{
-            nick: '@prueba3',
-            likes: '12'
-          }
-        },
-        topposts: {
-          src: '2',
-          likesone: '5',
-          likestwo: '4',
-          likesthree:'3'
-        },
-        month:  'septiembre' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'Andrés Serna' ,
-        username:  'aserna'
-        } ,
-        userId:  'aserna' ,
-        year:  '2017'
-      },
-      {
-        red: 'fb',
-        type: 'month',
-        activeusers:  '12' ,
-        allfans:  '2017' ,
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00¡' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        month:  'septiembre' ,
-        newfans:  '1' ,
-        nolikes:  '2' ,
-        likebyday: '0',
-        postbymonth: '0',
-        scopebyday: '0',
-        externalreference: '0',
-        viewswindows: '0',
-        topwindows: '0',
-        topreference: '0',
-        postsrc: '0',
-        datespost: '0',
-        prints:  '0' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-        userId:  'wserna' ,
-        year:  '2017'
-      },
-      {
-        red: 'fb',
-        type: 'month',
-        activeusers:  '14' ,
-        allfans:  '2017' ,
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        month:  'octubre' ,
-        newfans:  '2' ,
-        nolikes:  '3' ,
-        prints:  '1' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-          userId:  'wserna' ,
-          year:  '2017'
-      },
-      {
-        red: 'fb',
-        type: 'month',
-        activeusers:  '15s' ,
-        allfans:  '2017' ,
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        month:  'Noviembre' ,
-        newfans:  '3' ,
-        nolikes:  '3' ,
-        prints:  '1' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-          userId:  'wserna' ,
-          year:  '2017'
-      },
-      {
-        red: 'fb',
-        type: 'month',
-        activeusers:  '15s' ,
-        allfans:  '2016' ,
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        month:  'Noviembre' ,
-        newfans:  '2' ,
-        nolikes:  '3' ,
-        prints:  '1' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-          userId:  'wserna' ,
-          year:  '2016'
-      },
-      {
-        red: 'fb',
-        type: 'month',
-        activeusers:  '15s' ,
-        allfans:  '2015' ,
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        month:  'Noviembre' ,
-        newfans:  '2' ,
-        nolikes:  '3' ,
-        prints:  '1' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-          userId:  'wserna' ,
-          year:  '2015'
-      },
-      {
-        red: 'fb',
-        type: 'month',
-        activeusers:  '15s' ,
-        allfans:  '2015' ,
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        month:  'Febrero' ,
-        newfans:  '1' ,
-        nolikes:  '3' ,
-        prints:  '1' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-        userId:  'wserna' ,
-        year:  '2015'
-      },
-      {
-        red: 'fb',
-        type: 'month',
-        activeusers:  '2105' ,
-        allfans:  '2016' ,
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        month:  'Enero' ,
-        newfans:  '1' ,
-        nolikes:  '3' ,
-        prints:  '1' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-          userId:  'wserna' ,
-          year:  '2016'
-      },
-      {
-        red: 'fb',
-        type: 'year',
-        genre: {
-            women:'56.44',
-            men:'43.56'
-        },
-        age: {
-            ppal:'32.71',
-            others:'67.29'
-        },
-        language: {
-            ppal:'86.43',
-            others:'13.57'
-        },
-        country: {
-            ppal:'91.45',
-            sec:'4.3',
-            others:'4.25'
-        },
-        city: {
-            ppal:'50.48',
-            sec:'17.67',
-            others:'31.85'
-        },
-        activeusers: {
-            total:'1913',
-            months: {
-              septiembre:'3145',
-              octubre:'1751',
-              noviembre:'273',
-              diciembre: '2486'
-            }
-        },
-        allfans: {
-            total:'1535',
-            months: {
-              septiembre:'1443',
-              octubre:'1469',
-              noviembre:'1510',
-              diciembre: '1535'
-            }
-        },
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        newfans: {
-            total:'60',
-            months: {
-              septiembre:'114',
-              octubre:'35',
-              noviembre:'50',
-              diciembre: '40'
-            }
-        },
-        nolikes: {
-            total:'10',
-            months: {
-              septiembre:'10',
-              octubre:'7',
-              noviembre:'12',
-              diciembre: '12'
-            }
-        },
-        prints: {
-            total:'159327',
-            months: {
-              septiembre:'172405',
-              octubre:'190121',
-              noviembre:'161367',
-              diciembre: '113413'
-            }
-        },
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-          userId:  'wserna' ,
-          year:  '2017'
-      },
-      {
-        red: 'fb',
-        type: 'year',
-        genre: {
-            women:'56.44',
-            men:'43.56'
-        },
-        age: {
-            ppal:'32.71',
-            others:'67.29'
-        },
-        language: {
-            ppal:'86.43',
-            others:'13.57'
-        },
-        country: {
-            ppal:'91.45',
-            sec:'4.3',
-            others:'4.25'
-        },
-        city: {
-            ppal:'50.48',
-            sec:'17.67',
-            others:'31.85'
-        },
-        activeusers: {
-            total:'2016',
-            months: {
-              septiembre:'3144',
-              octubre:'1751',
-              noviembre:'273',
-              diciembre: '2486'
-            }
-        },
-        allfans: {
-            total:'2016',
-            months: {
-              septiembre:'1443',
-              octubre:'1469',
-              noviembre:'1510',
-              diciembre: '1535'
-            }
-        },
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        newfans: {
-            total:'2016',
-            months: {
-              septiembre:'114',
-              octubre:'35',
-              noviembre:'50',
-              diciembre: '40'
-            }
-        },
-        nolikes: {
-            total:'2016',
-            months: {
-              septiembre:'10',
-              octubre:'7',
-              noviembre:'12',
-              diciembre: '12'
-            }
-        },
-        prints: {
-            total:'2016',
-            months: {
-              septiembre:'172405',
-              octubre:'190121',
-              noviembre:'161367',
-              diciembre: '113413'
-            }
-        },
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-          userId:  'wserna' ,
-          year:  '2016'
-      },
-      {
-        red: 'fb',
-        type: 'year',
-        genre: {
-            women:'56.44',
-            men:'43.56'
-        },
-        age: {
-            ppal:'32.71',
-            others:'67.29'
-        },
-        language: {
-            ppal:'86.43',
-            others:'13.57'
-        },
-        country: {
-            ppal:'91.45',
-            sec:'4.3',
-            others:'4.25'
-        },
-        city: {
-            ppal:'50.48',
-            sec:'17.67',
-            others:'31.85'
-        },
-        activeusers: {
-            total:'2015',
-            months: {
-              septiembre:'3143',
-              octubre:'1751',
-              noviembre:'273',
-              diciembre: '2486'
-            }
-        },
-        allfans: {
-            total:'2015',
-            months: {
-              septiembre:'1443',
-              octubre:'1469',
-              noviembre:'1510',
-              diciembre: '1535'
-            }
-        },
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        newfans: {
-            total:'2015',
-            months: {
-              septiembre:'114',
-              octubre:'35',
-              noviembre:'50',
-              diciembre: '40'
-            }
-        },
-        nolikes: {
-            total:'2015',
-            months: {
-              septiembre:'10',
-              octubre:'7',
-              noviembre:'12',
-              diciembre: '12'
-            }
-        },
-        prints: {
-            total:'2015',
-            months: {
-              septiembre:'172405',
-              octubre:'190121',
-              noviembre:'161367',
-              diciembre: '113413'
-            }
-        },
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-          userId:  'wserna' ,
-          year:  '2015'
-      },
-      {
-        red: 'inst',
-        type: 'month',
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00¡' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        allfans:  '172' ,
-        follows:  '016' ,
-        allpost:  '2016' ,
-        postbymonth: '232',
-        likebymonth: '123',
-        comments: '23',
-        usersppal: {
-          userone:{
-            nick: '@prueba',
-            likes: '10'
-          },
-          usertwo:{
-            nick: '@prueba2',
-            likes: '11'
-          },
-          userthree:{
-            nick: '@prueba3',
-            likes: '12'
-          }
-        },
-        topposts: {
-          src: '2',
-          likesone: '5',
-          likestwo: '4',
-          likesthree:'3'
-        },
-        month:  'febrero' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-        userId:  'wserna' ,
-        year:  '2016'
-      },
-      {
-        red: 'inst',
-        type: 'month',
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00¡' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        allfans:  '173' ,
-        follows:  '017' ,
-        allpost:  '2017' ,
-        postbymonth: '232',
-        likebymonth: '123',
-        comments: '23',
-        usersppal: {
-          userone:{
-            nick: '@prueba',
-            likes: '10'
-          },
-          usertwo:{
-            nick: '@prueba2',
-            likes: '11'
-          },
-          userthree:{
-            nick: '@prueba3',
-            likes: '12'
-          }
-        },
-        topposts: {
-          src: '2',
-          likesone: '5',
-          likestwo: '4',
-          likesthree:'3'
-        },
-        month:  'octubre' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-        userId:  'wserna' ,
-        year:  '2017'
-      },
-      {
-        red: 'inst',
-        type: 'month',
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00¡' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        allfans:  '16' ,
-        follows:  '016' ,
-        allpost:  '2016' ,
-        postbymonth: '232',
-        likebymonth: '123',
-        comments: '23',
-        usersppal: {
-          userone:{
-            nick: '@prueba',
-            likes: '10'
-          },
-          usertwo:{
-            nick: '@prueba2',
-            likes: '11'
-          },
-          userthree:{
-            nick: '@prueba3',
-            likes: '12'
-          }
-        },
-        topposts: {
-          src: '2',
-          likesone: '5',
-          likestwo: '4',
-          likesthree:'3'
-        },
-        month:  'enero' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-        userId:  'wserna' ,
-        year:  '2016'
-      },
-      {
-        red: 'inst',
-        type: 'month',
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00¡' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        allfans:  '17' ,
-        follows:  '017' ,
-        allpost:  '2017' ,
-        postbymonth: '232',
-        likebymonth: '123',
-        comments: '23',
-        usersppal: {
-          userone:{
-            nick: '@prueba',
-            likes: '10'
-          },
-          usertwo:{
-            nick: '@prueba2',
-            likes: '11'
-          },
-          userthree:{
-            nick: '@prueba3',
-            likes: '12'
-          }
-        },
-        topposts: {
-          src: '2',
-          likesone: '5',
-          likestwo: '4',
-          likesthree:'3'
-        },
-        month:  'septiembre' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-        userId:  'wserna' ,
-        year:  '2017'
-      },
-      {
-        red: 'tw',
-        type: 'month',
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00¡' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        allfans:  '17' ,
-        allfollows: '3123',
-        newfans: '213',
-        globalmedia: '4324',
-        globalfavorites: '21345',
-        alltweets: '231',
-        tweets: '432',
-        retweets: '4324',
-        mentions: '2134',
-        favorites: '543',
-        messagedirects: '74',
-        hashtags: {
-          label1: '#prueba1',
-          cant1: '21',
-          label2: '#prueba2',
-          cant2: '20',
-          label3: '#prueba3',
-          cant3: '19',
-          label4: '#prueba4',
-          cant4: '18',
-          label5: '#prueba5',
-          cant5: '16',
-          label6: '#prueba6',
-          cant6: '13',
-          label7: '#prueba7',
-          cant7: '10',
-          label8: '#prueba8',
-          cant8: '7'
-        },
-        month:  'septiembre' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-        userId:  'wserna' ,
-        year:  '2017'
-      },
-      {
-        red: 'tw',
-        type: 'month',
-        createdAt: 'Wed Dec 21 2016 16:35:36 GMT+00:00¡' ,
-        id:  '47bc39bc-94ba-4dd6-be81-f6a96c77f676' ,
-        allfans:  '16' ,
-        allfollows: '3123',
-        newfans: '213',
-        globalmedia: '4324',
-        globalfavorites: '21345',
-        alltweets: '231',
-        tweets: '432',
-        retweets: '4324',
-        mentions: '2134',
-        favorites: '543',
-        messagedirects: '74',
-        hashtags: {
-          label1: '#prueba1',
-          cant1: '21',
-          label2: '#prueba2',
-          cant2: '20',
-          label3: '#prueba3',
-          cant3: '19',
-          label4: '#prueba4',
-          cant4: '18',
-          label5: '#prueba5',
-          cant5: '16',
-          label6: '#prueba6',
-          cant6: '13',
-          label7: '#prueba7',
-          cant7: '10',
-          label8: '#prueba8',
-          cant8: '7'
-        },
-        month:  'septiembre' ,
-        publicId:  '2bmtq4GOkd7DwUyA2jxrFQ' ,
-        user: {
-        avatar:  '//www.gravatar.com/avatar/eea20b749793fa73fffb24558f3360b6' ,
-        name:  'William Serna' ,
-        username:  'wserna'
-        } ,
-        userId:  'wserna' ,
-        year:  '2016'
-      },
-    ];*/
 
   empty(main).appendChild(template(ctx, ctx.dates));
   next();
@@ -21214,7 +20367,6 @@ page('/', utils.loadAuth, header, loadestadisticas, function (ctx, next) {
       $('.contMenuNav .tab-content-redesm:first-child').css('display', 'block');
       if (!$('#stadistitics-container .tab-content-redes').length > 0) {
         $('.contNewUser').fadeIn();
-        console.log('there are not dates');
       }
     });
 
@@ -21321,7 +20473,7 @@ function asyncload(ctx, next) {
 },{"../header":395,"../picture-card":405,"../utils":424,"./template":397,"axios":3,"empty-element":333,"page":361,"socket.io-client":368,"superagent":380,"title":384}],397:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<div class="container timeline cont-estadisticas">\n  <div id="top-menu" class="container">\n      <div class="row">\n        <div class="col m7 contNavRedes">\n          <ul class="tabs-menu-redes">\n            ', '\n            ', '\n            ', '\n            ', '\n          </ul>\n        </div>\n        <div class="col m5 contMenuNav">\n          ', '\n          ', '\n          ', '\n          ', '\n        </div>\n      </div>\n  </div>\n  <div id="stadistitics-container" class="cont-redes tab-content">\n    ', '\n    ', '\n    ', '\n    ', '\n    <div class="col m12 contNewUser">\n      <div class="title-error contMessageWelcome"><i class="fa fa-user" aria-hidden="true"></i><p>Bienvenido a Evermetric, a\xFAn no tienes estadisticas en la plataforma</p></div>\n    </div>\n  </div>\n  </div>'], ['<div class="container timeline cont-estadisticas">\n  <div id="top-menu" class="container">\n      <div class="row">\n        <div class="col m7 contNavRedes">\n          <ul class="tabs-menu-redes">\n            ', '\n            ', '\n            ', '\n            ', '\n          </ul>\n        </div>\n        <div class="col m5 contMenuNav">\n          ', '\n          ', '\n          ', '\n          ', '\n        </div>\n      </div>\n  </div>\n  <div id="stadistitics-container" class="cont-redes tab-content">\n    ', '\n    ', '\n    ', '\n    ', '\n    <div class="col m12 contNewUser">\n      <div class="title-error contMessageWelcome"><i class="fa fa-user" aria-hidden="true"></i><p>Bienvenido a Evermetric, a\xFAn no tienes estadisticas en la plataforma</p></div>\n    </div>\n  </div>\n  </div>']),
+var _templateObject = _taggedTemplateLiteral(['<div class="container timeline cont-estadisticas">\n  <div id="top-menu" class="container">\n      <div class="row">\n        <div class="col m7 contNavRedes">\n          <ul class="tabs-menu-redes">\n            ', '\n            ', '\n            ', '\n            ', '\n          </ul>\n        </div>\n        <div class="col m5 contMenuNav">\n          ', '\n          ', '\n          ', '\n          ', '\n        </div>\n      </div>\n  </div>\n  <div id="stadistitics-container" class="cont-redes tab-content">\n    ', '\n    ', '\n    ', '\n    ', '\n    <div class="col m12 contNewUser">\n      <div class="title-error contMessageWelcome">\n        <div class="contWelcome">\n          <img src="', '" />\n        </div>\n        <p>Bienvenido a Evermetric, a\xFAn no tienes estadisticas en la plataforma</p>\n      </div>\n    </div>\n  </div>\n  </div>'], ['<div class="container timeline cont-estadisticas">\n  <div id="top-menu" class="container">\n      <div class="row">\n        <div class="col m7 contNavRedes">\n          <ul class="tabs-menu-redes">\n            ', '\n            ', '\n            ', '\n            ', '\n          </ul>\n        </div>\n        <div class="col m5 contMenuNav">\n          ', '\n          ', '\n          ', '\n          ', '\n        </div>\n      </div>\n  </div>\n  <div id="stadistitics-container" class="cont-redes tab-content">\n    ', '\n    ', '\n    ', '\n    ', '\n    <div class="col m12 contNewUser">\n      <div class="title-error contMessageWelcome">\n        <div class="contWelcome">\n          <img src="', '" />\n        </div>\n        <p>Bienvenido a Evermetric, a\xFAn no tienes estadisticas en la plataforma</p>\n      </div>\n    </div>\n  </div>\n  </div>']),
     _templateObject2 = _taggedTemplateLiteral(['<div class="container container-login">\n      <div class="row">\n        <div class="col l12">\n          <div class="row contLogoLanding">\n            <img src="logo-evermetrics.png"/>\n          </div>\n        </div>\n        <div class="col l12">\n              <div class="row">\n                <div class="signup-box">\n                  <form class="signup-form" action="/login" method="POST">\n                    <div class="section cont-form-login" style="text-align:center;">\n                      <input type="text" name="username" placeholder="Nombre de usuario">\n                      <input type="password" name="password" placeholder="Contrase\xF1a">\n                      <button class="btn waves-effect waves-light btn-login" type="submit">Iniciar sesi\xF3n</button>\n                    </div>\n                  </form>\n                </div>\n                <div class="row hide">\n                  <a href="/signup">No tienes una cuenta</a>\n                </div>\n              </div>\n          </div>\n      </div>\n    </div>'], ['<div class="container container-login">\n      <div class="row">\n        <div class="col l12">\n          <div class="row contLogoLanding">\n            <img src="logo-evermetrics.png"/>\n          </div>\n        </div>\n        <div class="col l12">\n              <div class="row">\n                <div class="signup-box">\n                  <form class="signup-form" action="/login" method="POST">\n                    <div class="section cont-form-login" style="text-align:center;">\n                      <input type="text" name="username" placeholder="Nombre de usuario">\n                      <input type="password" name="password" placeholder="Contrase\xF1a">\n                      <button class="btn waves-effect waves-light btn-login" type="submit">Iniciar sesi\xF3n</button>\n                    </div>\n                  </form>\n                </div>\n                <div class="row hide">\n                  <a href="/signup">No tienes una cuenta</a>\n                </div>\n              </div>\n          </div>\n      </div>\n    </div>']),
     _templateObject3 = _taggedTemplateLiteral(['<li class="facebook mnli"><a href=".facebook"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>'], ['<li class="facebook mnli"><a href=".facebook"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</a></li>']),
     _templateObject4 = _taggedTemplateLiteral(['<li class="instagram mnli"><a href=".instagram"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a></li>'], ['<li class="instagram mnli"><a href=".instagram"><i class="fa fa-instagram" aria-hidden="true"></i>Instagram</a></li>']),
@@ -21381,7 +20533,7 @@ module.exports = function (ctx, dates) {
       console.log(dates.dato);
     }*/
 
-  var authenticated = yo(_templateObject, loadTabFacebook(ctx, dates), loadTabInstagram(ctx, dates), loadTabTwitter(ctx, dates), loadTabWeb(ctx, dates), loadMenuFb(ctx, dates), loadMenuInst(ctx, dates), loadMenuTwit(ctx, dates), loadMenuWeb(ctx, dates), loadDatesFb(ctx, dates), loadDatesInst(ctx, dates), loadDatesTw(ctx, dates), loadDatesWeb(ctx, dates));
+  var authenticated = yo(_templateObject, loadTabFacebook(ctx, dates), loadTabInstagram(ctx, dates), loadTabTwitter(ctx, dates), loadTabWeb(ctx, dates), loadMenuFb(ctx, dates), loadMenuInst(ctx, dates), loadMenuTwit(ctx, dates), loadMenuWeb(ctx, dates), loadDatesFb(ctx, dates), loadDatesInst(ctx, dates), loadDatesTw(ctx, dates), loadDatesWeb(ctx, dates), ctx.auth.src);
 
   var signin = yo(_templateObject2);
 
@@ -22214,11 +21366,10 @@ function datesfb() {
     );*/
     //token app evermetric EAAIAb2OuyU8BAKGwCoOE2wexkpx4ZCcBLiwkDtX6Ybf1FdCokv4Fc8pGnOWzWtH4znQyNylLA759ZBa5sGFa3oqUKiiMPEX67OzCjbkAzB6WVPi7eewYHewpYZCZBOkaOKglDHOp6RaIZCb5QV6Ilgpz3C4xCVT4ZD
     //token de app prueba EAAaZCZCVDNsU4BAM8OgVJqnc6JLDSSg189AnZAf0O3iuxf53lPMXvRIQyVuvz6TvHmZAZCXrbq8dp7Y0tdVeOHZCJShEMUWQOgvvYBnT2atdjM3ZC3kZAPAZCgIOwAF4mlmAATYJhdieEHpIIt3C4hSzEiMwu1kOe6Q8ZD
-    var token = 'EAACEdEose0cBAD65V14rozUpKMIDKk9jPPpm7EJH0tmxkevZA5pXK2EuD5bf3QKrw9cxp7VPC6oF9MmUZArt7bWj6N8RIPxLKtl6lWMsJZA21R5YzoUPHhzwB7UPZBhlaw7WZCZALFdLCSH6wMtV8EUSv6x9v1LwTC6xEeL6F14raoZBMJ3RuMYd4d6ZBdVYu2sZD';
-
-    FB.api('/maratondelasfloresmedellin', 'GET', { "fields": "id,name,posts.until(1498885200).since(1496293200){likes,comments,message,created_time,full_picture,link,insights.metric(post_impressions_unique)}", access_token: token }, function (response) {
+    var token = 'EAACEdEose0cBABn06EZCHpafEIvb129xMbFgGg1ZCkX7unFZBv0d1Yo3DZAufNFgB27CGcqmnVfduy6aZA4xa4YYEOMBO6wbLZA517aZBmnwyLCYPfsm9wNZAYn7h2keS1gncz6YSp8LsgGWtZBy3Scb7uOmi7PHp2ZAtSdLX9XkUoriCeUF9qkIcfqkDVamKz52MZD';
+    FB.api('/maratondelasfloresmedellin', 'GET', { "fields": "id,name,posts.until(1498885199).since(1496206800){likes,comments,message,created_time,full_picture,link,insights.metric(post_impressions_unique)}", access_token: token }, function (response) {
+      console.log(response);
       if (response && !response.error) {
-        console.log(response);
         var numLikes = 0;
         var numComments = 0;
         var bestPostId;
@@ -22226,11 +21377,6 @@ function datesfb() {
         var mayorCantLikes = 0;
         var alcancepost = 0;
         response.posts.data.map(function (datos, indexE) {
-          //console.log(datos.id);
-          var datetime = new Date(datos.created_time).toUTCString().split(" ").slice(1, 4).join(" "); //new Date(datos.created_time).toDateString();
-          //console.log('Este post fué publicado el ' + datetime);
-          //console.log('Mensaje del post: ' + datos.message);
-          //console.log('Ruta img: ' + datos.full_picture);
 
           if (datos.likes !== undefined) {
             datos.likes.data.map(function (valor) {
@@ -22243,38 +21389,16 @@ function datesfb() {
             mayorCantLikes = numLikes;
             bestPostId = datos.id;
             posicionBest = indexE;
-            //  console.log('entro al if  \n' + bestPostId + ' \n' + mayorCantLikes);
           }
-
-          //console.log('este post tiene ' + numLikes + ' me gustas.');
-
-          if (datos.comments !== undefined) {
-            datos.comments.data.map(function (valor) {
-              numComments = datos.comments.data.length;
-            });
-          } else {
-            numComments = 0;
-          }
-
-          //console.log('Este post tiene ' + numComments + ' comentarios.' );
-
-          datos.insights.data.map(function (valor) {
-            valor.values.map(function (dato) {
-              alcancepost = dato.value;
-            });
-          });
-
-          //console.log('Este post tiene ' + alcancepost + ' de alcance');
         });
 
         console.log('El post de mayor likes es ' + bestPostId + ' con ' + mayorCantLikes);
-        console.log('El post de mayor likes es ' + posicionBest);
 
         console.log(response.posts.data[posicionBest].id);
         var datetime = new Date(response.posts.data[posicionBest].created_time).toUTCString().split(" ").slice(1, 4).join(" "); //new Date(datos.created_time).toDateString();
-        console.log('Este post fué publicado el ' + datetime);
-        console.log('Mensaje del post: ' + response.posts.data[posicionBest].message);
-        console.log('Ruta img: ' + response.posts.data[posicionBest].full_picture);
+        var messagePost = response.posts.data[posicionBest].message;
+        var link = response.posts.data[posicionBest].link;
+        var rutaImg = response.posts.data[posicionBest].full_picture;
         if (response.posts.data[posicionBest] !== undefined) {
           response.posts.data[posicionBest].likes.data.map(function (valor) {
             numLikes = response.posts.data[posicionBest].likes.data.length;
@@ -22283,8 +21407,6 @@ function datesfb() {
           numLikes = 0;
         }
 
-        console.log('Este post tiene ' + numLikes + ' me gustas.');
-
         if (response.posts.data[posicionBest].comments !== undefined) {
           response.posts.data[posicionBest].comments.data.map(function (valor) {
             numComments = response.posts.data[posicionBest].comments.data.length;
@@ -22292,8 +21414,6 @@ function datesfb() {
         } else {
           numComments = 0;
         }
-
-        console.log('Este post tiene ' + numComments + ' comentarios.');
 
         if (response.posts.data[posicionBest].insights !== undefined) {
           response.posts.data[posicionBest].insights.data.map(function (valor) {
@@ -22305,12 +21425,150 @@ function datesfb() {
           alcancepost = 0;
         }
 
-        console.log('Este post tiene ' + alcancepost + ' de alcance');
+        var arrayBestPost = [datetime, link, rutaImg, numLikes, numComments, alcancepost];
+        var key = "bestPost";
+        console.log(arrayBestPost);
       } else {
         console.log(response.error);
       }
     });
 
+    /*FB.api(
+        '/maratondelasfloresmedellin/insights/page_tab_views_login_top_unique',
+        {"period":"day","since":"1496206800", "until":"1498885199", access_token: token},
+        function (response) {
+          console.log(response);
+          if (response && !response.error) {
+            var numviewtabs=0;
+            var numviewmayor=0;
+            var numviewmedio=0;
+            var numviewmenor=0;
+            var objectmayor=[];
+            var objectmedio=[];
+            var objecter=[];
+            var yaestam= [];
+            var acummayor=0;
+            var acummedio=0;
+            var acummenor=0;
+            response.data.map(function(datos){
+              datos.values.map(function(valor){
+                 for(var i in valor.value){
+                    var key = i;
+                    numviewtabs = valor.value[i];
+                    var index = yaestam.indexOf(key);
+                    if(numviewtabs > numviewmayor && index === -1){
+                      numviewmayor = numviewtabs;
+                      objectmayor = [key, numviewmayor];
+                      yaestam.push(key);
+                    }else if(numviewtabs > numviewmayor && objectmayor[0] === key){
+                      numviewmayor = numviewtabs;
+                      objectmayor = [key, numviewmayor];
+                    }
+                    else if(numviewmedio < numviewmayor && numviewmedio < numviewtabs && index === -1){
+                      numviewmedio = numviewtabs;
+                      objectmedio = [key, numviewmedio];
+                      yaestam.push(key);
+                    }else if(numviewmedio < numviewmayor && numviewmedio < numviewtabs && objectmedio[0] === key){
+                      numviewmedio = numviewtabs;
+                      objectmedio = [key, numviewmedio];
+                    }
+                    else if(numviewmenor<numviewtabs && numviewmenor < numviewmedio && index === -1){
+                      numviewmenor = numviewtabs;
+                      objecter = [key, numviewmenor]
+                      yaestam.push(key);
+                    }else if(numviewmenor<numviewtabs && numviewmenor < numviewmedio && objecter[0] === key){
+                      numviewmenor = numviewtabs;
+                      objecter = [key, numviewmenor]
+                    }
+                }
+               })
+            })
+            response.data.map(function(datos){
+              datos.values.map(function(valor){
+                 for(var i in valor.value){
+                  console.log(i);
+                    if(objectmayor[0] === i){
+                      acummayor = acummayor + valor.value[i];
+                    }
+                    if(objectmedio[0] === i){
+                      acummedio = acummedio + valor.value[i];
+                    }
+                    if(objecter[0] === i){
+                      acummenor = acummenor + valor.value[i];
+                    }
+                }
+                })
+            })
+             var key = "princTabs";
+               var cadenaPrinTabs = objectmayor[0] + ': ' + acummayor + ' '+ objectmedio[0]  + ': ' + acummedio + ' ' + objecter[0] + ': ' + acummenor;
+               console.log(cadenaPrinTabs);
+          }
+          else {
+            console.log(response.error);
+          }
+        }
+    );*/
+
+    /*FB.api(
+      '/maratondelasfloresmedellin/insights/page_views_external_referrals',
+      {"since":"1496206800", "until":"1498885199", access_token: token},
+      function (response) {
+        console.log(response);
+        if (response && !response.error) {
+          var numrefexternal = 0;
+          var nummayor =0;
+          var nummedio =0;
+          var numter =0;
+          var objectmayor=[];
+          var objectmedio=[];
+          var objecter=[];
+          var yaestam= [];
+          response.data.map(function(datos){
+            datos.values.map(function(valor){
+               for(var i in valor.value){
+                  var key = i;
+                  console.log(key);
+                  numrefexternal = valor.value[i];
+                  var index = yaestam.indexOf(key);
+                  if(numrefexternal > nummayor && index === -1){
+                    nummayor = numrefexternal;
+                    objectmayor = [key, nummayor];
+                    yaestam.push(key);
+                  }else if(numrefexternal > nummayor && objectmayor[0] === key){
+                    nummayor = numrefexternal;
+                    objectmayor = [key, nummayor];
+                  }
+                  else if(nummedio < nummayor && nummedio < numrefexternal && index === -1){
+                    nummedio = numrefexternal;
+                    objectmedio = [key, nummedio];
+                    yaestam.push(key);
+                  }else if(nummedio < nummayor && nummedio < numrefexternal && objectmedio[0] === key){
+                    nummedio = numrefexternal;
+                    objectmedio = [key, nummedio];
+                  }
+                  else if(numter<numrefexternal && numter < nummedio && index === -1){
+                    numter = numrefexternal;
+                    objecter = [key, numter]
+                    yaestam.push(key);
+                  }else if(numter<numrefexternal && numter < nummedio && objecter[0] === key){
+                    numter = numrefexternal;
+                    objecter = [key, numter]
+                  }
+              }
+            })
+          })
+            var arrayPrinRef = [objectmayor,objectmedio,objecter];
+          console.log(arrayPrinRef);
+         /* var cadenaPrinRef = objectmayor[0] + ': ' + objectmayor[1] + '\n'
+            + objectmedio[0] + ': ' + objectmedio[1] + '\n'
+            + objecter[0] + ': ' + objecter[1];cierro comentario
+         var cadenaPrinRef = objectmayor[0] + ': ' + objectmayor[1] + ' ' + objectmedio[0] + ': ' + objectmedio[1] + ' ' + objecter[0] + ': ' + objecter[1];
+        }
+        else {
+          console.log(response.error);
+        }
+      }
+    );*/
     /*FB.api(
         '/maratondelasfloresmedellin/insights/page_tab_views_login_top_unique',
         {"period":"day","since":"1493614800", "until":"1494478800", access_token: token},
@@ -23093,7 +22351,7 @@ page('/upload-dates', function (ctx, next) {
 },{"./template":419,"empty-element":333,"page":361,"title":384}],419:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row" style="display:none;">\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito"class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="fb" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" value="2017" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Fans totales">\n              <input type="text" name="newfans" placeholder="Fans nuevos">\n              <input type="text" name="prints" placeholder="Impresiones">\n              <input type="text" name="nolikes" placeholder="No me gustas">\n              <input type="text" name="activeusers" placeholder="Usuarios activos">\n              <input type="text" name="likebyday" placeholder="Me Gusta (promedio por d\xEDa)">\n              <input type="text" name="postbymonth" placeholder="Post en el mes">\n              <input type="text" name="scopebyday" placeholder="Alcance (promedio por d\xEDa)">\n              <input type="text" name="externalreference" placeholder="Referencias Externas">\n              <input type="text" name="viewswindows" placeholder="Vistas Pesta\xF1as">\n              <input type="text" name="topwindows" placeholder="Principales Pesta\xF1as">\n              <input type="text" name="topreference" placeholder="Principales Referencias">\n              <input type="text" name="postsrc" placeholder="Post m\xE1s efectivo">\n              <input type="text" name="datespost" placeholder="Datos del post">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <div class="contFecha" style="display:flex;">\n             <div style="flex:1;text-align: right;padding: 0 10px;"><input type="date" id="since" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n             <div style="flex:1;text-align: left;"><input type="date" id="until" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n          </div>\n          <input type="button"  class="btn" value="Cargar fecha" onclick=', '></input>\n          <input type="button" id="actualizarfb" class="btn hide" value="Actualizar" onclick=', '></input>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row" style="display:none;">\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito"class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="fb" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" value="2017" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Fans totales">\n              <input type="text" name="newfans" placeholder="Fans nuevos">\n              <input type="text" name="prints" placeholder="Impresiones">\n              <input type="text" name="nolikes" placeholder="No me gustas">\n              <input type="text" name="activeusers" placeholder="Usuarios activos">\n              <input type="text" name="likebyday" placeholder="Me Gusta (promedio por d\xEDa)">\n              <input type="text" name="postbymonth" placeholder="Post en el mes">\n              <input type="text" name="scopebyday" placeholder="Alcance (promedio por d\xEDa)">\n              <input type="text" name="externalreference" placeholder="Referencias Externas">\n              <input type="text" name="viewswindows" placeholder="Vistas Pesta\xF1as">\n              <input type="text" name="topwindows" placeholder="Principales Pesta\xF1as">\n              <input type="text" name="topreference" placeholder="Principales Referencias">\n              <input type="text" name="postsrc" placeholder="Post m\xE1s efectivo">\n              <input type="text" name="datespost" placeholder="Datos del post">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <div class="contFecha" style="display:flex;">\n             <div style="flex:1;text-align: right;padding: 0 10px;"><input type="date" id="since" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n             <div style="flex:1;text-align: left;"><input type="date" id="until" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n          </div>\n          <input type="button"  class="btn" value="Cargar fecha" onclick=', '></input>\n          <input type="button" id="actualizarfb" class="btn hide" value="Actualizar" onclick=', '></input>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>']);
+var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row" >\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito" class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="fb" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" value="2017" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Fans totales">\n              <input type="text" name="newfans" placeholder="Fans nuevos">\n              <input type="text" name="prints" placeholder="Impresiones">\n              <input type="text" name="nolikes" placeholder="No me gustas">\n              <input type="text" name="activeusers" placeholder="Usuarios activos">\n              <input type="text" name="likebyday" placeholder="Me Gusta (promedio por d\xEDa)">\n              <input type="text" name="postbymonth" placeholder="Post en el mes">\n              <input type="text" name="scopebyday" placeholder="Alcance (promedio por d\xEDa)">\n              <input type="text" name="externalreference" placeholder="Referencias Externas">\n              <input type="text" name="viewswindows" placeholder="Vistas Pesta\xF1as">\n              <input type="text" name="topwindows" placeholder="Principales Pesta\xF1as">\n              <input type="text" name="topreference" placeholder="Principales Referencias">\n              <input type="text" name="postsrc" placeholder="Post m\xE1s efectivo">\n              <input type="text" name="datespost" placeholder="Datos del post">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row"  style="display:none;">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <div class="contFecha" style="display:flex;">\n             <div style="flex:1;text-align: right;padding: 0 10px;"><input type="date" id="since" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n             <div style="flex:1;text-align: left;"><input type="date" id="until" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n          </div>\n          <input type="button"  class="btn" value="Cargar fecha" onclick=', '></input>\n          <input type="button" id="actualizarfb" class="btn hide" value="Actualizar" onclick=', '></input>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row" >\n        <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">\n        <h3 class="titleUploadred"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</h3>\n          <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=', '>\n            <div id="fileName" class="fileUpload btn">\n              <span><i class="fa fa-file-excel-o" aria-hidden="true" style="padding-right:10px;"></i>Subir archivo</span>\n              <input name="fileexcel" id="file" type="file" class="upload" onchange=', ' />\n            </div>\n            <button id="btnUpload" type="submit" class="btn hide">Subir</button>\n            <button id="btnCancel" type="button" style="background-color:#f39237;" class="btn hide" onclick=', '><i class="fa fa-times" aria-hidden="true"></i></button>\n          </form>\n           <span id="fotoUpExito" class="hide">El archivo se ha subido con \xE9xito.</span>\n        </div>\n      </div>\n      <div class="row" style="display:none;">\n        <div class="signup-box">\n          <form class="signup-form" action="/api/estadisticas" method="POST">\n            <div class="divider"></div>\n            <div class="section" style="text-align:center;">\n              <input type="text" name="red" value="fb" style="display:none;">\n              <input type="text" name="type" value="month" style="display:none;">\n              <input type="text" name="year" value="2017" placeholder="A\xF1o">\n              <input type="text" name="month" placeholder="Mes">\n              <input type="text" name="allfans" placeholder="Fans totales">\n              <input type="text" name="newfans" placeholder="Fans nuevos">\n              <input type="text" name="prints" placeholder="Impresiones">\n              <input type="text" name="nolikes" placeholder="No me gustas">\n              <input type="text" name="activeusers" placeholder="Usuarios activos">\n              <input type="text" name="likebyday" placeholder="Me Gusta (promedio por d\xEDa)">\n              <input type="text" name="postbymonth" placeholder="Post en el mes">\n              <input type="text" name="scopebyday" placeholder="Alcance (promedio por d\xEDa)">\n              <input type="text" name="externalreference" placeholder="Referencias Externas">\n              <input type="text" name="viewswindows" placeholder="Vistas Pesta\xF1as">\n              <input type="text" name="topwindows" placeholder="Principales Pesta\xF1as">\n              <input type="text" name="topreference" placeholder="Principales Referencias">\n              <input type="text" name="postsrc" placeholder="Post m\xE1s efectivo">\n              <input type="text" name="datespost" placeholder="Datos del post">\n              <button class="btn waves-effect waves-light btn-login" type="submit">Registrar</button>\n            </div>\n          </form>\n        </div>\n      </div>\n      <div class="row"  style="display:none;">\n        <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">\n          <div class="contFecha" style="display:flex;">\n             <div style="flex:1;text-align: right;padding: 0 10px;"><input type="date" id="since" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n             <div style="flex:1;text-align: left;"><input type="date" id="until" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>\n          </div>\n          <input type="button"  class="btn" value="Cargar fecha" onclick=', '></input>\n          <input type="button" id="actualizarfb" class="btn hide" value="Actualizar" onclick=', '></input>\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 
@@ -23123,7 +22381,6 @@ function onsubmit(ev) {
   ev.preventDefault();
   var data = new FormData(this);
   request.post('/api/estadisticas').send(data).end(function (err, res) {
-    console.log(arguments); //arguments es una array de todos lo parametros que recibe una función
     toggleButtons();
     document.getElementById('formUpload').reset();
     document.getElementById("fotoUpExito").classList.toggle("hide");
@@ -23138,17 +22395,20 @@ function onsubmit(ev) {
 }
 
 function inicializarApi() {
-  var token = 'EAACEdEose0cBAColET0Fxy7ZCdPBDxcp5ZBJGu23kEMWH7EkaBlxn2rEY2pDg6vmVzuciQ765oGqAZCjF7Fbdm09wRbh28MyacbsSDXemYn7IcFkChsQUoMZA5VZA1ojysIyPh3S18K2FU9Bt8zZCFz9yTHGfTy5a1UwTHK5GByc0K4Iq7oNkFuWKZCQMRSe2YZD';
+  var token = 'EAACEdEose0cBAEhcYmrtuZAUE8jbStJsHYx9l9nohnPAdoHAJtwMf1lBwdcInzVtZAA5LRQxFD7mx5cagQiu1ygZArv8VsyUkgwlV5lmZCbDwjl7Oit5VwZCQqZCllBY8sqmbKib8ClkbHn8CKecMIDuFymG4GV66eARfJvSnpxhO9Djf1BDNEE8dG3dVOKZBcZD';
   var dateSince = document.getElementById('since').value;
   var dateUntil = document.getElementById('until').value;
 
+  console.log(dateSince);
+  console.log(dateUntil);
   function splitDate(date) {
     var result = date.split('-');
+    console.log(result);
     return result;
   }
-  var dateSince = document.getElementById('since').value;
 
   var nowkdate = splitDate(dateSince);
+  console.log(nowkdate);
   var yearspl = nowkdate[0];
   var monthspl = parseInt(nowkdate[1]);
   console.log(yearspl);
@@ -23205,13 +22465,13 @@ function inicializarApi() {
   var dayp = ("0" + myDate.getDate()).slice(-2);*/
 
   dateSince += " 00:00:00";
-  dateUntil += " 00:00:00";
+  dateUntil += " 23:59:59";
 
   var sinceR = Date.parse(dateSince + "-0500") / 1000;
   var untilR = Date.parse(dateUntil + "-0500") / 1000;
 
   createObject(token, sinceR, untilR, function (key, dato) {
-    datafb.push(dato);
+    /*datafb.push(dato);*/
     datajson += '"' + key + '":"' + dato + '", ';
     /*if(dato.length>1){
         console.log(dato);
@@ -23243,6 +22503,7 @@ function controlBtn() {
 }
 
 function subir(red, type, month, year) {
+  console.log(datajson);
   var objeto = '{';
   objeto += datajson;
   objeto += '"red":"' + red + '",';
@@ -23362,7 +22623,7 @@ function createObject(token, sinceR, untilR, callback) {
           numDias = datos.values.length;
         });
         var promedioDia = megustapro / numDias;
-        promedioDia = parseInt(promedioDia, 10);
+        promedioDia = parseInt(promedioDia, 10); //pasar el nùmero a entero
         console.log(promedioDia + ' Promedio por día');
         var key = "promLikesByDay";
         callback(key, promedioDia);
@@ -23445,14 +22706,6 @@ function createObject(token, sinceR, untilR, callback) {
           });
         });
 
-        /*console.log(objectmayor + ' mayor');
-        console.log(objectmedio + ' medio');
-        console.log(objecter + ' menor');*/
-        var arrayPrinRef = [objectmayor, objectmedio, objecter];
-        console.log(arrayPrinRef);
-        /* var cadenaPrinRef = objectmayor[0] + ': ' + objectmayor[1] + '\n'
-           + objectmedio[0] + ': ' + objectmedio[1] + '\n'
-           + objecter[0] + ': ' + objecter[1];*/
         var cadenaPrinRef = objectmayor[0] + ': ' + objectmayor[1] + ' ' + objectmedio[0] + ': ' + objectmedio[1] + ' ' + objecter[0] + ': ' + objecter[1];
         var key = "princRef";
         callback(key, cadenaPrinRef);
@@ -23610,13 +22863,13 @@ function createObject(token, sinceR, untilR, callback) {
         var messagePost = response.posts.data[posicionBest].message;
         var link = response.posts.data[posicionBest].link;
         var rutaImg = response.posts.data[posicionBest].full_picture;
-        if (response.posts.data[posicionBest] !== undefined) {
-          response.posts.data[posicionBest].likes.data.map(function (valor) {
+        /*if(response.posts.data[posicionBest] !== undefined ){
+          response.posts.data[posicionBest].likes.data.map(function(valor){
             numLikes = response.posts.data[posicionBest].likes.data.length;
-          });
-        } else {
-          numLikes = 0;
-        }
+          })
+        }else{
+            numLikes = 0;
+        }*/
 
         if (response.posts.data[posicionBest].comments !== undefined) {
           response.posts.data[posicionBest].comments.data.map(function (valor) {
@@ -23677,7 +22930,7 @@ page('/uploadp', function (ctx, next) {
 },{"./template":421,"empty-element":333,"page":361,"title":384}],421:[function(require,module,exports){
 'use strict';
 
-var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n        <form class="signup-form" action="/api/prueba" method="POST" enctype="multipart/form-data">\n        <input type="file" name="filep" />\n        <input type="submit" value="Upload Image" name="submit">\n        </form>\n\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n        <form class="signup-form" action="/api/prueba" method="POST" enctype="multipart/form-data">\n        <input type="file" name="filep" />\n        <input type="submit" value="Upload Image" name="submit">\n        </form>\n\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>']);
+var _templateObject = _taggedTemplateLiteral(['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n        <form class="signup-form formUploadPost" action="/api/prueba" method="POST" enctype="multipart/form-data">\n        <input type="file" name="filep" style="border:0;" />\n        <input class="btn" type="submit" value="Upload Image" name="submit" style="color:white;padding:0 20px;margin-top:30px;">\n        </form>\n\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>'], ['<div class="col l12">\n      <div class="row">\n        <div class="signup-box">\n        <form class="signup-form formUploadPost" action="/api/prueba" method="POST" enctype="multipart/form-data">\n        <input type="file" name="filep" style="border:0;" />\n        <input class="btn" type="submit" value="Upload Image" name="submit" style="color:white;padding:0 20px;margin-top:30px;">\n        </form>\n\n        </div>\n      </div>\n      <div class="row">\n        <a href="/">Volver a la cuenta</a>\n      </div>\n    </div>']);
 
 function _taggedTemplateLiteral(strings, raw) { return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
 

@@ -5,9 +5,9 @@ var request = require('superagent')
 var upform = yo`<div class="col l12">
       <div class="row">
         <div class="signup-box">
-        <form class="signup-form" action="/api/prueba" method="POST" enctype="multipart/form-data">
-        <input type="file" name="filep" />
-        <input type="submit" value="Upload Image" name="submit">
+        <form class="signup-form formUploadPost" action="/api/prueba" method="POST" enctype="multipart/form-data">
+        <input type="file" name="filep" style="border:0;" />
+        <input class="btn" type="submit" value="Upload Image" name="submit" style="color:white;padding:0 20px;margin-top:30px;">
         </form>
 
         </div>

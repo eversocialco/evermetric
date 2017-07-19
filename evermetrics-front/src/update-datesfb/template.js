@@ -58,15 +58,14 @@ function datesfb(){
       );*/
       //token app evermetric EAAIAb2OuyU8BAKGwCoOE2wexkpx4ZCcBLiwkDtX6Ybf1FdCokv4Fc8pGnOWzWtH4znQyNylLA759ZBa5sGFa3oqUKiiMPEX67OzCjbkAzB6WVPi7eewYHewpYZCZBOkaOKglDHOp6RaIZCb5QV6Ilgpz3C4xCVT4ZD
       //token de app prueba EAAaZCZCVDNsU4BAM8OgVJqnc6JLDSSg189AnZAf0O3iuxf53lPMXvRIQyVuvz6TvHmZAZCXrbq8dp7Y0tdVeOHZCJShEMUWQOgvvYBnT2atdjM3ZC3kZAPAZCgIOwAF4mlmAATYJhdieEHpIIt3C4hSzEiMwu1kOe6Q8ZD
-      var token= 'EAACEdEose0cBAD65V14rozUpKMIDKk9jPPpm7EJH0tmxkevZA5pXK2EuD5bf3QKrw9cxp7VPC6oF9MmUZArt7bWj6N8RIPxLKtl6lWMsJZA21R5YzoUPHhzwB7UPZBhlaw7WZCZALFdLCSH6wMtV8EUSv6x9v1LwTC6xEeL6F14raoZBMJ3RuMYd4d6ZBdVYu2sZD';
-
+      var token= 'EAACEdEose0cBABn06EZCHpafEIvb129xMbFgGg1ZCkX7unFZBv0d1Yo3DZAufNFgB27CGcqmnVfduy6aZA4xa4YYEOMBO6wbLZA517aZBmnwyLCYPfsm9wNZAYn7h2keS1gncz6YSp8LsgGWtZBy3Scb7uOmi7PHp2ZAtSdLX9XkUoriCeUF9qkIcfqkDVamKz52MZD';
       FB.api(
         '/maratondelasfloresmedellin',
         'GET',
-        {"fields":"id,name,posts.until(1498885200).since(1496293200){likes,comments,message,created_time,full_picture,link,insights.metric(post_impressions_unique)}", access_token: token},
+        {"fields":"id,name,posts.until(1498885199).since(1496206800){likes,comments,message,created_time,full_picture,link,insights.metric(post_impressions_unique)}", access_token: token},
         function (response) {
+          console.log(response);
           if (response && !response.error) {
-              console.log(response);
               var numLikes = 0;
               var numComments = 0;
               var bestPostId;
@@ -74,11 +73,6 @@ function datesfb(){
               var mayorCantLikes = 0;
               var alcancepost = 0;
               response.posts.data.map(function(datos, indexE){
-                //console.log(datos.id);
-                var datetime = new Date(datos.created_time).toUTCString().split(" ").slice(1,4).join(" ");//new Date(datos.created_time).toDateString();
-                //console.log('Este post fué publicado el ' + datetime);
-                //console.log('Mensaje del post: ' + datos.message);
-                //console.log('Ruta img: ' + datos.full_picture);
 
                 if(datos.likes !== undefined ){
                   datos.likes.data.map(function(valor){
@@ -91,38 +85,16 @@ function datesfb(){
                   mayorCantLikes = numLikes;
                   bestPostId = datos.id;
                   posicionBest = indexE;
-                //  console.log('entro al if  \n' + bestPostId + ' \n' + mayorCantLikes);
                 }
-
-                //console.log('este post tiene ' + numLikes + ' me gustas.');
-
-                if(datos.comments !== undefined){
-                  datos.comments.data.map(function(valor){
-                    numComments = datos.comments.data.length;
-                  })
-                }else {
-                  numComments = 0;
-                }
-
-                //console.log('Este post tiene ' + numComments + ' comentarios.' );
-
-                datos.insights.data.map(function(valor){
-                  valor.values.map(function(dato){
-                    alcancepost=dato.value;
-                  })
-                })
-
-                //console.log('Este post tiene ' + alcancepost + ' de alcance');
               })
 
               console.log('El post de mayor likes es ' + bestPostId + ' con ' + mayorCantLikes);
-              console.log('El post de mayor likes es ' + posicionBest );
 
               console.log(response.posts.data[posicionBest].id);
               var datetime = new Date(response.posts.data[posicionBest].created_time).toUTCString().split(" ").slice(1,4).join(" ");//new Date(datos.created_time).toDateString();
-              console.log('Este post fué publicado el ' + datetime);
-              console.log('Mensaje del post: ' + response.posts.data[posicionBest].message);
-              console.log('Ruta img: ' + response.posts.data[posicionBest].full_picture);
+              var messagePost = response.posts.data[posicionBest].message;
+              var link = response.posts.data[posicionBest].link;
+              var rutaImg = response.posts.data[posicionBest].full_picture;
               if(response.posts.data[posicionBest] !== undefined ){
                 response.posts.data[posicionBest].likes.data.map(function(valor){
                   numLikes = response.posts.data[posicionBest].likes.data.length;
@@ -131,8 +103,6 @@ function datesfb(){
                   numLikes = 0;
               }
 
-              console.log('Este post tiene ' + numLikes + ' me gustas.');
-
               if(response.posts.data[posicionBest].comments !== undefined){
                 response.posts.data[posicionBest].comments.data.map(function(valor){
                   numComments = response.posts.data[posicionBest].comments.data.length;
@@ -140,8 +110,6 @@ function datesfb(){
               }else {
                 numComments = 0;
               }
-
-              console.log('Este post tiene ' + numComments + ' comentarios.' );
 
               if(response.posts.data[posicionBest].insights !== undefined){
                 response.posts.data[posicionBest].insights.data.map(function(valor){
@@ -153,8 +121,9 @@ function datesfb(){
                 alcancepost = 0;
               }
 
-              console.log('Este post tiene ' + alcancepost + ' de alcance');
-
+              var arrayBestPost = [datetime, link, rutaImg, numLikes, numComments, alcancepost];
+              var key = "bestPost";
+              console.log(arrayBestPost);
             }
             else {
               console.log(response.error);
@@ -162,6 +131,152 @@ function datesfb(){
         }
       );
 
+      /*FB.api(
+          '/maratondelasfloresmedellin/insights/page_tab_views_login_top_unique',
+          {"period":"day","since":"1496206800", "until":"1498885199", access_token: token},
+          function (response) {
+            console.log(response);
+            if (response && !response.error) {
+              var numviewtabs=0;
+              var numviewmayor=0;
+              var numviewmedio=0;
+              var numviewmenor=0;
+              var objectmayor=[];
+              var objectmedio=[];
+              var objecter=[];
+              var yaestam= [];
+              var acummayor=0;
+              var acummedio=0;
+              var acummenor=0;
+              response.data.map(function(datos){
+                datos.values.map(function(valor){
+
+                  for(var i in valor.value){
+                      var key = i;
+                      numviewtabs = valor.value[i];
+                      var index = yaestam.indexOf(key);
+                      if(numviewtabs > numviewmayor && index === -1){
+                        numviewmayor = numviewtabs;
+                        objectmayor = [key, numviewmayor];
+                        yaestam.push(key);
+                      }else if(numviewtabs > numviewmayor && objectmayor[0] === key){
+                        numviewmayor = numviewtabs;
+                        objectmayor = [key, numviewmayor];
+                      }
+                      else if(numviewmedio < numviewmayor && numviewmedio < numviewtabs && index === -1){
+                        numviewmedio = numviewtabs;
+                        objectmedio = [key, numviewmedio];
+                        yaestam.push(key);
+                      }else if(numviewmedio < numviewmayor && numviewmedio < numviewtabs && objectmedio[0] === key){
+                        numviewmedio = numviewtabs;
+                        objectmedio = [key, numviewmedio];
+                      }
+                      else if(numviewmenor<numviewtabs && numviewmenor < numviewmedio && index === -1){
+                        numviewmenor = numviewtabs;
+                        objecter = [key, numviewmenor]
+                        yaestam.push(key);
+                      }else if(numviewmenor<numviewtabs && numviewmenor < numviewmedio && objecter[0] === key){
+                        numviewmenor = numviewtabs;
+                        objecter = [key, numviewmenor]
+                      }
+                  }
+
+                })
+              })
+              response.data.map(function(datos){
+                datos.values.map(function(valor){
+
+                  for(var i in valor.value){
+                    console.log(i);
+                      if(objectmayor[0] === i){
+                        acummayor = acummayor + valor.value[i];
+                      }
+                      if(objectmedio[0] === i){
+                        acummedio = acummedio + valor.value[i];
+                      }
+                      if(objecter[0] === i){
+                        acummenor = acummenor + valor.value[i];
+                      }
+                  }
+
+
+                })
+              })
+
+              var key = "princTabs";
+
+                var cadenaPrinTabs = objectmayor[0] + ': ' + acummayor + ' '+ objectmedio[0]  + ': ' + acummedio + ' ' + objecter[0] + ': ' + acummenor;
+                 console.log(cadenaPrinTabs);
+            }
+            else {
+              console.log(response.error);
+            }
+          }
+      );*/
+
+         /*FB.api(
+           '/maratondelasfloresmedellin/insights/page_views_external_referrals',
+           {"since":"1496206800", "until":"1498885199", access_token: token},
+           function (response) {
+             console.log(response);
+             if (response && !response.error) {
+               var numrefexternal = 0;
+               var nummayor =0;
+               var nummedio =0;
+               var numter =0;
+               var objectmayor=[];
+               var objectmedio=[];
+               var objecter=[];
+               var yaestam= [];
+               response.data.map(function(datos){
+                 datos.values.map(function(valor){
+
+                   for(var i in valor.value){
+                       var key = i;
+                       console.log(key);
+                       numrefexternal = valor.value[i];
+                       var index = yaestam.indexOf(key);
+                       if(numrefexternal > nummayor && index === -1){
+                         nummayor = numrefexternal;
+                         objectmayor = [key, nummayor];
+                         yaestam.push(key);
+                       }else if(numrefexternal > nummayor && objectmayor[0] === key){
+                         nummayor = numrefexternal;
+                         objectmayor = [key, nummayor];
+                       }
+                       else if(nummedio < nummayor && nummedio < numrefexternal && index === -1){
+                         nummedio = numrefexternal;
+                         objectmedio = [key, nummedio];
+                         yaestam.push(key);
+                       }else if(nummedio < nummayor && nummedio < numrefexternal && objectmedio[0] === key){
+                         nummedio = numrefexternal;
+                         objectmedio = [key, nummedio];
+                       }
+                       else if(numter<numrefexternal && numter < nummedio && index === -1){
+                         numter = numrefexternal;
+                         objecter = [key, numter]
+                         yaestam.push(key);
+                       }else if(numter<numrefexternal && numter < nummedio && objecter[0] === key){
+                         numter = numrefexternal;
+                         objecter = [key, numter]
+                       }
+                   }
+                 })
+               })
+
+
+               var arrayPrinRef = [objectmayor,objectmedio,objecter];
+               console.log(arrayPrinRef);
+              /* var cadenaPrinRef = objectmayor[0] + ': ' + objectmayor[1] + '\n'
+                 + objectmedio[0] + ': ' + objectmedio[1] + '\n'
+                 + objecter[0] + ': ' + objecter[1];cierro comentario
+              var cadenaPrinRef = objectmayor[0] + ': ' + objectmayor[1] + ' ' + objectmedio[0] + ': ' + objectmedio[1] + ' ' + objecter[0] + ': ' + objecter[1];
+             }
+             else {
+               console.log(response.error);
+             }
+           }
+        );*/
       /*FB.api(
           '/maratondelasfloresmedellin/insights/page_tab_views_login_top_unique',
           {"period":"day","since":"1493614800", "until":"1494478800", access_token: token},

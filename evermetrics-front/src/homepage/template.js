@@ -64,7 +64,12 @@ module.exports = function (ctx, dates) {
     ${loadDatesTw(ctx, dates)}
     ${loadDatesWeb(ctx, dates)}
     <div class="col m12 contNewUser">
-      <div class="title-error contMessageWelcome"><i class="fa fa-user" aria-hidden="true"></i><p>Bienvenido a Evermetric, aún no tienes estadisticas en la plataforma</p></div>
+      <div class="title-error contMessageWelcome">
+        <div class="contWelcome">
+          <img src="${ctx.auth.src}" />
+        </div>
+        <p>Bienvenido a Evermetric, aún no tienes estadisticas en la plataforma</p>
+      </div>
     </div>
   </div>
   </div>`
