@@ -24,6 +24,33 @@ a{
   flex-direction: column;
 }
 
+.titleHeaderDates{
+  padding:20px;
+  text-align:center;
+}
+
+.titleKpi{
+  margin-bottom: 0;
+}
+
+.titlteHeaderAno{
+  padding:20px;
+  text-align:center;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.paddingSides{
+  padding: 0 40px;
+}
+
+.rowMarginBottom{
+   margin-bottom: 30px !important;
+}
+
+.dFlex{
+  display:flex;
+}
+
 .contAnalytics .cont-variables i{
   color: black;
   padding-right: 10px;
@@ -187,6 +214,14 @@ a{
 
 .btn-idioma{
   background-color: transparent;
+}
+
+.borderLeftNone{
+   border-left: none !important;
+}
+
+.blackColor{
+  color:black;
 }
 
 input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea{

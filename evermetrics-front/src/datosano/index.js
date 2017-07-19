@@ -3,15 +3,15 @@ var yo = require('yo-yo');
 module.exports = function(dato) {
   return yo`<div class="ano">
   <div id="fb${dato.year}" class="col m12 comparativo-ano tab-content-datos fb${dato.year}">
-    <h4 style="padding:20px;text-align:center;">Año ${dato.year}</h4>
+    <h4 class="titleHeaderDates">Año ${dato.year}</h4>
       <div class="cont-datos-anos">
-        <div class="row" style="margin-bottom: 30px !important;">
+        <div class="row rowMarginBottom">
           <div class="col m8 cont-ano-border" >
             <div class="cont-info-ano cont-total-fans-ano">
               <div class="cont-titulo">
                 <i class="fa fa-users" aria-hidden="true"></i>
                 <div class="con-der-titulo">
-                  <h5 style="margin-bottom: 0;">Fans Totales</h5>
+                  <h5 class="titleKpi">Fans Totales</h5>
                   <p id="count-number" class="timer count-title" data-to="${dato.allfansy.total}" data-speed="1500" style="color: rgb(59, 178, 115);"></p>
                 </div>
               </div>
@@ -21,8 +21,8 @@ module.exports = function(dato) {
           <div class="col m4">
             <div class="col m12 cont-ano-border">
               <div class="cont-info-ano">
-                <div style="padding: 0 40px;">
-                  <h5 style="margin-bottom: 0;"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Fans Nuevos</h5>
+                <div class="paddingSides">
+                  <h5 class="titleKpi"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Fans Nuevos</h5>
                   <small>(Promedio por mes)</small>
                   <p id="count-number" class="timer count-title" data-to="${dato.newfansy.total}" data-speed="1500" style="color: rgb(59, 178, 115);"></p>
                 </div>
@@ -32,11 +32,11 @@ module.exports = function(dato) {
 
           </div>
         </div>
-        <div class="row" style="margin-bottom: 30px !important;">
+        <div class="row rowMarginBottom" >
           <div class="col m4 cont-ano-border">
             <div class="cont-info-ano">
-              <div style="padding: 0 40px;">
-                <h5 style="margin-bottom: 0;"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>No me Gusta</h5>
+              <div class="paddingSides">
+                <h5 class="titleKpi"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>No me Gusta</h5>
                 <small>(Promedio por mes)</small>
                 <p id="count-number" class="timer count-title" data-to="${dato.nolikesy.total}" data-speed="1500" style="color: #f39237;"></p>
               </div>
@@ -45,8 +45,8 @@ module.exports = function(dato) {
           </div>
           <div class="col m4 cont-ano-border">
             <div class="cont-info-ano">
-              <div style="padding: 0 40px;">
-                <h5 style="margin-bottom: 0;"><i class="fa fa-exchange" aria-hidden="true"></i>Impresión</h5>
+              <div class="paddingSides">
+                <h5 class="titleKpi"><i class="fa fa-exchange" aria-hidden="true"></i>Impresión</h5>
                 <small>(Promedio por mes)</small>
                 <p id="count-number" class="timer count-title" data-to="${dato.printsy.total}" data-speed="1500" style="color: #e1bc29;"></p>
               </div>
@@ -55,8 +55,8 @@ module.exports = function(dato) {
           </div>
           <div class="col m4 cont-ano-border">
             <div class="cont-info-ano">
-              <div style="padding: 0 40px;">
-                <h5 style="margin-bottom: 0;"><i class="fa fa-user" aria-hidden="true"></i>Usuarios Activos</h5>
+              <div class="paddingSides">
+                <h5 class="titleKpi"><i class="fa fa-user" aria-hidden="true"></i>Usuarios Activos</h5>
                 <small>(Promedio por mes)</small>
                 <p id="count-number" class="timer count-title" data-to="${dato.activeusersy.total}" data-speed="1500" style="color: rgb(83, 168, 195);">1913</p>
               </div>
@@ -64,7 +64,7 @@ module.exports = function(dato) {
             </div>
           </div>
         </div>
-        <div class="row" style="display:flex;margin-bottom: 30px !important;">
+        <div class="row rowMarginBottom dFlex">
           <div class="cont-ano-border">
             <div class="cont-info-ano cont-tortas">
               <div class="datos-tortas">
