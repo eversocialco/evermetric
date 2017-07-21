@@ -58,8 +58,67 @@ function datesfb(){
       );*/
       //token app evermetric EAAIAb2OuyU8BAKGwCoOE2wexkpx4ZCcBLiwkDtX6Ybf1FdCokv4Fc8pGnOWzWtH4znQyNylLA759ZBa5sGFa3oqUKiiMPEX67OzCjbkAzB6WVPi7eewYHewpYZCZBOkaOKglDHOp6RaIZCb5QV6Ilgpz3C4xCVT4ZD
       //token de app prueba EAAaZCZCVDNsU4BAM8OgVJqnc6JLDSSg189AnZAf0O3iuxf53lPMXvRIQyVuvz6TvHmZAZCXrbq8dp7Y0tdVeOHZCJShEMUWQOgvvYBnT2atdjM3ZC3kZAPAZCgIOwAF4mlmAATYJhdieEHpIIt3C4hSzEiMwu1kOe6Q8ZD
-      var token= 'EAACEdEose0cBABn06EZCHpafEIvb129xMbFgGg1ZCkX7unFZBv0d1Yo3DZAufNFgB27CGcqmnVfduy6aZA4xa4YYEOMBO6wbLZA517aZBmnwyLCYPfsm9wNZAYn7h2keS1gncz6YSp8LsgGWtZBy3Scb7uOmi7PHp2ZAtSdLX9XkUoriCeUF9qkIcfqkDVamKz52MZD';
+      var token= 'EAACEdEose0cBABiPCikVC87LnJvhiatFZBrWkaAiist3F9qNHkIFOiV6WUb5Ei9qtxFQQcVt61ksvJhgkyXZC05rUNKUkaN6cY8sNSupyYkhMI2xB56p7i3MBlXpaWFVqRuVlZBMqAqZARDgUCaELunsPDuJSAbIypeeGP6v6cpFRZCnAZBm0n9gexJxxIdqgZD';
       FB.api(
+        '/maratondelasfloresmedellin/insights/page_views_external_referrals',
+        {"since":"1496206800", "until":"1498885199", access_token: token},
+        function (response) {
+          console.log(response);
+          if (response && !response.error) {
+            var numrefexternal = 0;
+            var nummayor =0;
+            var nummedio =0;
+            var numter =0;
+            var objectmayor=[];
+            var objectmedio=[];
+            var objecter=[];
+            var yaestam= [];
+            response.data.map(function(datos){
+              datos.values.map(function(valor){
+
+                for(var i in valor.value){
+                    var key = i;
+                    numrefexternal = valor.value[i];
+                    var index = yaestam.indexOf(key);
+                    if(numrefexternal > nummayor && index === -1){
+                      nummayor = numrefexternal;
+                      objectmayor = [key, nummayor];
+                      yaestam.push(key);
+                    }else if(numrefexternal > nummayor && objectmayor[0] === key){
+                      nummayor = numrefexternal;
+                      objectmayor = [key, nummayor];
+                    }
+                    else if(nummedio < nummayor && nummedio < numrefexternal && index === -1){
+                      nummedio = numrefexternal;
+                      objectmedio = [key, nummedio];
+                      yaestam.push(key);
+                    }else if(nummedio < nummayor && nummedio < numrefexternal && objectmedio[0] === key){
+                      nummedio = numrefexternal;
+                      objectmedio = [key, nummedio];
+                    }
+                    else if(numter<numrefexternal && numter < nummedio && index === -1){
+                      numter = numrefexternal;
+                      objecter = [key, numter]
+                      yaestam.push(key);
+                    }else if(numter<numrefexternal && numter < nummedio && objecter[0] === key){
+                      numter = numrefexternal;
+                      objecter = [key, numter]
+                    }
+                }
+              })
+            })
+
+
+           var cadenaPrinRef = objectmayor[0] + ': ' + objectmayor[1] + ' ' + objectmedio[0] + ': ' + objectmedio[1] + ' ' + objecter[0] + ': ' + objecter[1];
+            var key = "princRef";
+          }
+          else {
+            console.log(response.error);
+          }
+        }
+     );
+
+      /*FB.api(
         '/maratondelasfloresmedellin',
         'GET',
         {"fields":"id,name,posts.until(1498885199).since(1496206800){likes,comments,message,created_time,full_picture,link,insights.metric(post_impressions_unique)}", access_token: token},
@@ -129,7 +188,7 @@ function datesfb(){
               console.log(response.error);
             }
         }
-      );
+      );*/
 
       /*FB.api(
           '/maratondelasfloresmedellin/insights/page_tab_views_login_top_unique',

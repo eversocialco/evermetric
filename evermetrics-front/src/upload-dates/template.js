@@ -5,7 +5,7 @@ var datafb = [];
 var datajson = "";
 
 var upform = yo`<div class="col l12">
-      <div class="row" >
+      <div class="row" style="display:none;">
         <div class="col sm12 m10 offset-m1 l8 offset-l2 center-align">
         <h3 class="titleUploadred"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</h3>
           <form enctype="multipart/form-data" class="form-upload" id="formUpload" onsubmit=${onsubmit}>
@@ -47,7 +47,7 @@ var upform = yo`<div class="col l12">
           </form>
         </div>
       </div>
-      <div class="row"  style="display:none;">
+      <div class="row"  >
         <div id="caja" class="contBtnUpdate" style="text-align: center;margin: 40px 0 10px;">
           <div class="contFecha" style="display:flex;">
              <div style="flex:1;text-align: right;padding: 0 10px;"><input type="date" id="since" style="width:50%;border: 1px solid #7ae7c7;color: #7ae7c7;border-radius: 4px;padding: 0 15px;"></div>
@@ -97,7 +97,7 @@ var upform = yo`<div class="col l12">
     }
 
     function inicializarApi(){
-      var token= 'EAACEdEose0cBAEhcYmrtuZAUE8jbStJsHYx9l9nohnPAdoHAJtwMf1lBwdcInzVtZAA5LRQxFD7mx5cagQiu1ygZArv8VsyUkgwlV5lmZCbDwjl7Oit5VwZCQqZCllBY8sqmbKib8ClkbHn8CKecMIDuFymG4GV66eARfJvSnpxhO9Djf1BDNEE8dG3dVOKZBcZD';
+      var token= 'EAACEdEose0cBABiPCikVC87LnJvhiatFZBrWkaAiist3F9qNHkIFOiV6WUb5Ei9qtxFQQcVt61ksvJhgkyXZC05rUNKUkaN6cY8sNSupyYkhMI2xB56p7i3MBlXpaWFVqRuVlZBMqAqZARDgUCaELunsPDuJSAbIypeeGP6v6cpFRZCnAZBm0n9gexJxxIdqgZD';
       var dateSince = document.getElementById('since').value;
       var dateUntil = document.getElementById('until').value;
 

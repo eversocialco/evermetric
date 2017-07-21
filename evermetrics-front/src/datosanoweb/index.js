@@ -3,7 +3,7 @@ var yo = require('yo-yo');
 module.exports = function(dato) {
   return yo`<div class="estadisticas">
   <div id="wb${dato.year}" class="col m12 cont-datos tab-content-datos contAnalytics wb${dato.year}">
-    <h4 style="padding:20px;text-align:center;border-bottom: 1px solid whitesmoke;">Año ${dato.year}</h4>
+    <h4 class="titlteHeaderAno">Año ${dato.year}</h4>
     <h4>Audiencia</h4>
     <div class="row">
       <div class="col m4 cont-variables">
@@ -45,13 +45,13 @@ module.exports = function(dato) {
       </div>
     </div>
     <div class="row">
-        <div class="col m7 cont-variables " style="border-right-color: white;">
+        <div class="col m7 cont-variables ">
             <h5>Páginas más vistas</h5>
             <p><a href="${dato.urlpagmoreview1 || 0}" target="_blank" style="color: #53a8c3;">1. ${dato.pagmoreview1 || 0}</a></p>
             <p><a href="${dato.urlpagmoreview2 || 0}" target="_blank" style="color: #53a8c3;">2. ${dato.pagmoreview2 || 0}</a></p>
             <p><a href="${dato.urlpagmoreview3 || 0}" target="_blank" style="color: #53a8c3;">3. ${dato.pagmoreview3 || 0}</a></p>
         </div>
-        <div class="col m5 cont-variables" style="border-left-color: white;">
+        <div class="col m5 cont-variables">
             <h5>Número de veces vistas </h5>
             <p> ${dato.numpagmoreview1 || 0} vistos <br> ${dato.numpagmoreview2 || 0} vistos<br> ${dato.numpagmoreview3 || 0} vistos</p>
         </div>
@@ -61,7 +61,7 @@ module.exports = function(dato) {
           <div class="col m12 cont-ano-border">
             <div class="cont-info-ano cont-total-fans-ano">
               <div class="cont-titulo">
-                <i class="fa fa-sign-in" aria-hidden="true" style="color:black"></i>
+                <i class="fa fa-sign-in" aria-hidden="true" ></i>
                 <div class="con-der-titulo">
                   <h5 style="margin-bottom: 0;">Sesiones</h5>
                 </div>
@@ -76,7 +76,7 @@ module.exports = function(dato) {
           <div class="col m12 cont-ano-border">
             <div class="cont-info-ano cont-total-fans-ano">
               <div class="cont-titulo">
-                <i class="fa fa-user" aria-hidden="true" style="color:black"></i>
+                <i class="fa fa-user" aria-hidden="true"></i>
                 <div class="con-der-titulo">
                   <h5 style="margin-bottom: 0;">Usuarios</h5>
                 </div>
@@ -91,7 +91,7 @@ module.exports = function(dato) {
         <div class="col m12 cont-ano-border">
           <div class="cont-info-ano cont-total-fans-ano">
             <div class="cont-titulo">
-              <i class="fa fa-line-chart" aria-hidden="true" style="color:black"></i>
+              <i class="fa fa-line-chart" aria-hidden="true"></i>
               <div class="con-der-titulo">
                 <h5 style="margin-bottom: 0;">Numero de visitas a páginas</h5>
               </div>
@@ -106,7 +106,7 @@ module.exports = function(dato) {
         <div class="col m12 cont-ano-border">
           <div class="cont-info-ano cont-total-fans-ano">
             <div class="cont-titulo">
-              <i class="fa fa-clock-o" aria-hidden="true" style="color:black"></i>
+              <i class="fa fa-clock-o" aria-hidden="true" ></i>
               <div class="con-der-titulo">
                 <h5 style="margin-bottom: 0;">Duración Promedio de la sesión</h5>
               </div>
@@ -121,7 +121,7 @@ module.exports = function(dato) {
         <div class="col m12 cont-ano-border">
           <div class="cont-info-ano cont-total-fans-ano">
             <div class="cont-titulo">
-              <i class="fa fa-user-times" aria-hidden="true" style="color:black"></i>
+              <i class="fa fa-user-times" aria-hidden="true" ></i>
               <div class="con-der-titulo">
                 <h5 style="margin-bottom: 0;">Porcentaje de Rebote</h5>
               </div>
@@ -133,29 +133,29 @@ module.exports = function(dato) {
     </div>
     <div class="row">
       <div class="col m5">
-        <div class="col m12 cont-variables current" style="border-left: none !important;">
+        <div class="col m12 cont-variables borderLeftNone current">
           <h5>Demografía</h5>
             <a class="linktorta" href="#wstortaidiomas${dato.year}">
               <p class="current">
-              <i class="fa fa-language" aria-hidden="true" style="color:black"></i> Idioma</p>
+              <i class="fa fa-language" aria-hidden="true"></i> Idioma</p>
             </a>
         </div>
         <div class="col m12 cont-variables current">
           <a class="linktorta" href="#wstortapais${dato.year}">
             <p class="current">
-            <i class="fa fa-globe" aria-hidden="true" style="color:black"></i> País</p>
+            <i class="fa fa-globe" aria-hidden="true"></i> País</p>
           </a>
         </div>
         <div class="col m12 cont-variables current">
           <a class="linktorta" href="#wstortaciudad${dato.year}">
             <p class="current">
-            <i class="fa fa-building" aria-hidden="true" style="color:black"></i> Ciudad</p>
+            <i class="fa fa-building" aria-hidden="true"></i> Ciudad</p>
           </a>
         </div>
         <div class="col m12 cont-variables">
           <a class="linktorta" href="#wstortavisit${dato.year}">
             <p class="current">
-            <i class="fa fa-users" aria-hidden="true" style="color:black"></i> Visitantes</p>
+            <i class="fa fa-users" aria-hidden="true"></i> Visitantes</p>
           </a>
         </div>
       </div>
