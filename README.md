@@ -8,6 +8,12 @@ Para lanzar la aplicación localmente se debe tener instalado rethinkdb. Una vez
 rethinkdb
 ```
 
+Se debe crear la configuración de la base de datos ejecutando el archivo setup.js que se encuentra en la carpeta evermetrics-dbs. Con el comando
+
+```
+node setup.js
+```
+
 Luego debemos vamos a lanzar los microservicios, para esto debemos tener en cuenta que debemos linkear el paquete de evermetrics-dbs como dependencia de evermetrics-api localmente con el comando
 
 ```
