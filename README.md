@@ -13,9 +13,9 @@
 
 3. En el mismo directorio (*evermetrics-dbs*) correr los microservicios en sus respectivos puertos
 
-  i. `$ micro -p 5001 users.js`
-  ii. `$ micro -p 5002 auth.js`
-  iii. `$ micro -p 5003 estadisticas.js`
-  * Recordar que cada uno es un proceso en la terminal.
+  1. `$ micro -p 5001 users.js`
+  2. `$ micro -p 5002 auth.js`
+  3. `$ micro -p 5003 estadisticas.js`
+  4. Recordar que cada uno es un proceso en la terminal.
 
 4. Finalmente, una vez tenemos todo listo, solo corremos el script `$ npm start`
