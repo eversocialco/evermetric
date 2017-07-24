@@ -1,7 +1,8 @@
 *.log
 */node_modules
 */rethinkdb_data
+*/public
+*/uploads
+package-lock.json
 
 rethinkdb_data
-evermetrics-front/public
-evermetrics-front/uploads
