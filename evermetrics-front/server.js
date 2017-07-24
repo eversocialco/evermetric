@@ -38,7 +38,7 @@ var upload = multer({ storage: storage, fileFilter : function(req, file, callbac
     callback(null, true);
 } }).single('fileexcel');
 var xlstojson = require("xls-to-json-lc");
-var xlsxtojson = require("xlsx-to-json-lc");
+var xlsxtojson = require("xlsx-to-json-depfix");
 var fs = require('fs');
 
 var port = process.env.PORT || 5050;
