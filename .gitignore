@@ -1,0 +1,6 @@
+*.log
+evermetrics-api/node_modules
+evermetrics-api/rethinkdb_data
+evermetrics-front/node_modules
+evermetrics-front/public/*
+evermetrics-front/uploads
