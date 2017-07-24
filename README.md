@@ -1,42 +1,21 @@
-# evermetric
+# Evermetric
 
-**Instrucciones para ejecutar**
+## Instrucciones para ejecutar
 
-Para lanzar la aplicación localmente se debe tener instalado rethinkdb. Una vez instalado se lanza con el comando
+1. Para lanzar la aplicación localmente se debe tener instalado como dependencias globales rethinkdb y micro, y correr `$ npm install` en todos los directorios.
 
-```
-rethinkdb
-```
+  1. [Instalar rethinkdb](https://www.rethinkdb.com/docs/install/).
+  2. [Instalar micro](https://github.com/zeit/micro#usage).
+  3. Después corre el comando `$ rethinkdb` donde quieras (directorio) guardar la info de la db.
 
-Se debe crear la configuración de la base de datos ejecutando el archivo setup.js que se encuentra en la carpeta evermetrics-dbs. Con el comando
 
-```
-node setup.js
-```
+2. Ir al directorio `*evermetrics-dbs*` y correr `$ node setup.js` para instalar la base de datos
 
-Luego debemos vamos a lanzar los microservicios, para esto debemos tener en cuenta que debemos linkear el paquete de evermetrics-dbs como dependencia de evermetrics-api localmente con el comando
+3. En el mismo directorio (*evermetrics-dbs*) correr los microservicios en sus respectivos puertos
 
-```
-npm link
-```
-Para lanzar los servicios lo realizamos con el siguiente comando.
+  1. `$ micro -p 5001 users.js`
+  2. `$ micro -p 5002 auth.js`
+  3. `$ micro -p 5003 estadisticas.js`
+  * Recordar que cada uno es un proceso en la terminal.
 
-```
-micro -p 5001 users.js
-
-micro -p 5002  auth.js
-
-micro -p 5003 estadisticas.js
-```
-
-Luego para finalizar debemos ejecutar la aplicación desde el módulo front, para esto debemos tener en cuenta que debemos tener linkeado el paquete de evermetrics-client en el módulo de evermetrics front, esto lo realizamos con
-
-```
-npm link
-```
-
-Para lanzar la aplicación se realiza con el comando.
-
-```
-npm start
-```
+4. Finalmente, una vez tenemos todo listo, solo corremos el script `$ npm start`
