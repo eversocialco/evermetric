@@ -1,10 +1,13 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var rename = require('gulp-rename');
-var babel = require('babelify');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
-var watchify = require('watchify');
+const gulp = require('gulp');
+const sass = require('gulp-sass');
+const rename = require('gulp-rename');
+const babel = require('babelify');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
+const watchify = require('watchify');
+const gutil = require('gulp-util');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
 
 gulp.task('styles', function(){
   gulp
@@ -45,6 +48,28 @@ function compile(watch){
 
   rebundle();
 } //esta función va a crear los scripts de nuevo si hubieron cambios en los archivos, y recibe una variable que le va indicar  si vamos a hacer watch o no, si no lo hace simplemente ejecutaremos el build
+
+
+// This task is for js build with webpack and babel loader
+gulp
+  .task('dev', ['styles', 'assets', 'bundle'], () => {
+    gulp
+      .watch('./src/*', ['bundle']);
+    
+    gulp
+      .watch('./index.scss', ['styles']);
+});
+
+gulp
+  .task('bundle', () => {
+    console.log('Bundle with webpack!');
+
+    webpack(webpackConfig, (error, status) => {
+      gutil.log("[webpack:build]", status.toString({
+        colors: true,
+      }));
+    });
+  });
 
 /*gulp.task('scripts', function(){
   browserify('./src/index.js')//llamamos browserify y le mandamos como para el archivo que qeremos que procese
