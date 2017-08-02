@@ -54,7 +54,7 @@ function compile(watch){
 gulp
   .task('dev', ['styles', 'assets', 'bundle'], () => {
     gulp
-      .watch('./src/*', ['bundle']);
+      .watch('./src/**', ['bundle']);
     
     gulp
       .watch('./index.scss', ['styles']);
