@@ -4,7 +4,7 @@
  */
 const { FB } = require('./FB');
 
-// This functions rerive as params tha page and fields to get from the API
+// This functions recive and process as params the page, fields and type (example: insigths...) to get from the API adn just return'em
 function getFromThis(page, fields, type) {
   if (!type) {
 
