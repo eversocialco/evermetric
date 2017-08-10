@@ -6,6 +6,7 @@ import { send, json } from 'micro';
 import HttpHash from 'http-hash';
 import moment from 'moment';
 import fetchAll from './lib/fetchAll';
+import cleanThis from './lib/cleanResponse.js';
 import { 
   totalFansOf,
   newFansOf,
@@ -38,8 +39,13 @@ hash.set('GET /:page', async function authenticate (req, res, params) {
       ...fetchAll(totalViewsOf, page)
     ])
     .then(responses => {
-      send(res, 200, responses);
-      console.log(responses);
+      // put date of today to the query
+      responses[0].date = new Date();
+      let finalResponse = cleanThis(responses);
+
+      // put the fan_count, pageId and date of response
+      finalResponse.unshift(responses[0]);
+      send(res, 200, finalResponse);
     })
     .catch(e => { console.log(e); send(res, 500, e); })
     
