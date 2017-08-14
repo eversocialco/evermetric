@@ -39,13 +39,22 @@ hash.set('GET /:page', async function authenticate (req, res, params) {
       ...fetchAll(totalViewsOf, page)
     ])
     .then(responses => {
-      // put date of today to the query and name of page
-      responses[0].date = new Date();
-      responses[0].name = page;
-      let finalResponse = cleanThis(responses);
+      // put date of today and date to response
+      let date = new Date();
+      let name = page;
+      let pageId = responses[0].id;
+      let clearResponse = cleanThis(responses);
 
       // put the fan_count, pageId and date of response
-      finalResponse.unshift(responses[0]);
+      clearResponse.unshift(responses[0]);
+
+      let finalResponse = {
+        date,
+        name, 
+        pageId,
+        data: clearResponse,
+      };
+
       send(res, 200, finalResponse);
     })
     .catch(e => { console.log(e); send(res, 500, e); })
