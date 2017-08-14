@@ -39,8 +39,9 @@ hash.set('GET /:page', async function authenticate (req, res, params) {
       ...fetchAll(totalViewsOf, page)
     ])
     .then(responses => {
-      // put date of today to the query
+      // put date of today to the query and name of page
       responses[0].date = new Date();
+      responses[0].name = page;
       let finalResponse = cleanThis(responses);
 
       // put the fan_count, pageId and date of response
