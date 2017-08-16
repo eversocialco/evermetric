@@ -16,6 +16,6 @@
   1. `$ micro -p 5001 users.js`
   2. `$ micro -p 5002 auth.js`
   3. `$ micro -p 5003 estadisticas.js`
-  * Recordar que cada uno es un proceso en la terminal.
+  4. Recordar que cada uno es un proceso en la terminal.
 
 4. Finalmente, una vez tenemos todo listo, solo corremos el script `$ npm start`
