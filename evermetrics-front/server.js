@@ -162,7 +162,7 @@ app.get('/whoami', function (req, res) {
 })
 
 app.get('/api/pictures', function (req, res) {
-  client.listPictures(function (err, pictures) {
+  client.getPicture('eversocial', function (err, pictures) {
     if (err) return res.send([]);
 
     res.send(pictures);
@@ -170,12 +170,21 @@ app.get('/api/pictures', function (req, res) {
 })
 
 app.get('/api/estadisticas', function (req, res) {
- client.listEstadisticas(function (err, dates) {
+ client.listMetrics(function (err, dates) {
     if (err) return res.send([]);
 
     res.send(dates);
   })
 })
+
+app.get('/api/facebook/:page', (req, res) => {
+  const page = req.params.page
+  client.getFacebookDataOf(page, (error, response) => {
+    if (error)
+      res.status(500).send(error);
+    res.status(200).send(response);
+  });
+});
 
 app.post('/api/pictures', ensureAuth, function (req, res) {
 
@@ -208,7 +217,7 @@ app.post('/api/estadisticas', ensureAuth, function (req, res) {
     var dates = req.body;
     console.log(dates);
 
-    client.saveEstadisticas({
+    client.saveMetrics({
       red: dates.red,
       type: dates.type,
       likebyday: dates.promLikesByDay,
@@ -278,7 +287,7 @@ app.post('/api/estadisticas', ensureAuth, function (req, res) {
                   var username = req.user.username;
 
 
-                    client.saveEstadisticas({
+                    client.saveMetrics({
                       red: dates.red,
                       type: dates.type,
                       likebyday: dates.likebyday,
@@ -468,7 +477,7 @@ app.post('/api/estadisticas-inst', ensureAuth, function (req, res) {
                   var user = req.user;
                   var username = req.user.username;
 
-                  client.saveEstadisticas({
+                  client.saveMetrics({
                     red: dates.red,
                     type: dates.type,
                     year: dates.year,
@@ -557,7 +566,7 @@ app.post('/api/estadisticas-tw', ensureAuth, function (req, res) {
                   var user = req.user;
                   var username = req.user.username;
 
-                  client.saveEstadisticas({
+                  client.saveMetrics({
                     red: dates.red,
                     type: dates.type,
                     year: dates.year,
@@ -650,7 +659,7 @@ app.post('/api/estadisticas-web', ensureAuth, function (req, res) {
                   var user = req.user;
                   var username = req.user.username;
 
-                  client.saveEstadisticas({
+                  client.saveMetrics({
                     red: dates.red,
                     type: dates.type,
                     year: dates.year,
