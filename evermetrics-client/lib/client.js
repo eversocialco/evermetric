@@ -11,9 +11,19 @@ class Client {
         pictures: 'http://api.evermetric.co/picture',
         users: 'http://api.evermetric.co/user',
         auth: 'http://api.evermetric.co/auth',
-        estadisticas: 'http://api.evermetric.co/dates'
+        metrics: 'http://api.evermetric.co/dates'
       }
     }
+  }
+
+  getFacebookDataOf (page, callback) {
+    let opt = {
+      method: 'GET',
+      uri: `${this.options.endpoints.facebookApi}/${page}`,
+      json: true
+    }
+
+    return Promise.resolve(request(opt)).asCallback(callback);
   }
 
   getPicture (id, callback) {
@@ -26,20 +36,20 @@ class Client {
     return Promise.resolve(request(opt)).asCallback(callback)
   }
 
-  getEstadisticas (id, callback) {
+  getMetrics (id, callback) {
     let opt = {
       method: 'GET',
-      uri: `${this.options.endpoints.estadisticas}/${id}`,
+      uri: `${this.options.endpoints.metrics}/${id}`,
       json: true
     }
 
     return Promise.resolve(request(opt)).asCallback(callback)
   }
 
-  saveEstadisticas (dates, callback) {
+  saveMetrics (dates, callback) {
     let opt = {
       method: 'POST',
-      uri: `${this.options.endpoints.estadisticas}/`,
+      uri: `${this.options.endpoints.metrics}/`,
       body: dates,
       json: true
     }
@@ -47,10 +57,10 @@ class Client {
     return Promise.resolve(request(opt)).asCallback(callback)
   }
 
-  listEstadisticas (callback) {
+  listMetrics (callback) {
     let opt = {
       method: 'GET',
-      uri: `${this.options.endpoints.estadisticas}/list`,
+      uri: `${this.options.endpoints.metrics}/list`,
       json: true
     }
     return Promise.resolve(request(opt)).asCallback(callback)

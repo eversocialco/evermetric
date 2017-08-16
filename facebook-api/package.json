@@ -1,0 +1,22 @@
+{
+  "name": "facebook-api",
+  "version": "1.0.0",
+  "description": "Module for facebook API back-end logic",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "facebook",
+    "API",
+    "node"
+  ],
+  "author": "Juan José Arboleda <soyjuanarbol@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "fb": "^2.0.0",
+    "http-hash": "^2.0.0",
+    "micro": "^4.1.1",
+    "moment": "^2.18.1"
+  }
+}
