@@ -180,9 +180,19 @@ app.get('/api/estadisticas', function (req, res) {
 app.get('/api/facebook/:page', (req, res) => {
   const page = req.params.page
   client.getFacebookDataOf(page, (error, response) => {
-    if (error)
+    if (error) {
       res.status(500).send(error);
-    res.status(200).send(response);
+    } else {
+      // save that response in our db
+      client.saveMetrics(response, (err, resp) => {
+        if (err) {
+          res.status(500).send(error);
+        } else {
+          res.status(200).send(response);
+        }
+      });
+
+    }
   });
 });
 
