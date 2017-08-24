@@ -2,8 +2,16 @@
 - hosts: evermetrics*
   sudo: yes
   pre_tasks:
-    - name: Update apt repository
-      apt: update_cache=yes
+    - name: 'install python2'
+      raw: sudo bash -c "test -e /usr/bin/python || (apt -qqy update && apt install -qy python-minimal)"
+    # - name: install python2
+    #   raw: sudo apt-get -y install python-simplejson
+    #   raw: add-apt-repository -y ppa:fkrull/deadsnakes-python2.7
+      # - apt: update_cache=yes
+      # - raw: sudo apt-get -y install python-simplejson
+      # - raw: apt-get install -y python2.7 --force-yes
+      # - name: Update apt repository
+      #     apt: update_cache=yes
   roles:
     - evermetrics
   vars:
