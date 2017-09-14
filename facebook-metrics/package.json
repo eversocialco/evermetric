@@ -1,0 +1,16 @@
+{
+  "name": "facebook-metrics",
+  "version": "1.0.0",
+  "description": "This package process the data (or response) given by facebook-api module and generate data for metrics",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "evermetrics",
+    "metrics",
+    "facebook"
+  ],
+  "author": "Juan José Arboleda <soyjuanarbol@gmail.com>",
+  "license": "MIT"
+}
