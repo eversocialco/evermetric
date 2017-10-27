@@ -31,6 +31,7 @@ hash.set('GET /:username', async function getUser (req, res, params) {
   let username = params.username
   await db.connect()
   let user = await db.getUser(username)
+  await db.disconnect()
 
   delete user.email
   delete user.password
